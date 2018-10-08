@@ -1,0 +1,78 @@
+#submit{
+    color: white;
+    border-color: #0E50EA;
+    margin-left: 25px;
+}
+.navbar-brand{
+    font-family: 'Monoton', cursive;
+}
+#footer{
+    position: relative;
+    bottom: -80px;
+}
+.btn{
+    padding-left: 35px;
+    padding-right: 35px;
+    color:#FF6523;
+}
+h1{
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    font-family: 'Archivo Black', sans-serif;
+    margin-top: 75px;
+}
+h2{
+    text-align: center; 
+    margin-top: 15px;
+}
+.form-group{
+    height: 1000px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    color: rgba(16, 181, 234, 1);
+    font-size: 20px;
+}
+.form-control{
+    border-color: #FF6523;
+}
+#lieu{
+    text-align: center;  
+}
+#place{
+    margin-bottom: 350px;
+}
+
+
+#bgcoach{
+  background-image: url('../img/IMG-20180703-WA0023.jpg');   
+}
+
+#connexion,body{ 
+   
+ background-color: white;
+  margin-top:55px;
+  margin-bottom: 55px;
+}
+  
+#btnConnexion{
+    margin-top: 10px;
+}
+.img-fluid{
+    margin-top: 10px;
+}
+#inscriptioncoach{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#Devenir{
+alignment-adjust:central;
+}
+.enjoy{
+    margin-left: 400px;
+}
+
+
+
+
