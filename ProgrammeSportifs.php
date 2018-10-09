@@ -53,30 +53,7 @@ include 'header.php';
             <div class="col-md-8">
                 <div class="row">
                     <figure class="col-md-3">
-                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
-                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" alt="placeholder"
-                                 class="img-fluid" />
-                        </a>
-                    </figure>
 
-                    <figure class="col-md-3">
-                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
-                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" alt="placeholder"
-                                 class="img-fluid" />
-                        </a>
-                    </figure>
-
-                    <figure class="col-md-3">
-                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
-                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" alt="placeholder"
-                                 class="img-fluid" />
-                        </a>
-                    </figure>
-
-                    <figure class="col-md-3">
-                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
-                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" alt="placeholder"
-                                 class="img-fluid" />
                         </a>
                     </figure>
                 </div>

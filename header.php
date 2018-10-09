@@ -10,7 +10,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Monoton" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Monoton" rel="stylesheet">
+        
         <title>ProjetPro</title>
 <!--création d'une navbar-->
     <body>

@@ -25,6 +25,9 @@ h2{
     text-align: center; 
     margin-top: 15px;
 }
+p{
+    padding-left: 10px;
+}
 .form-group{
     height: 1000px;
     background-position: center;
@@ -72,7 +75,27 @@ alignment-adjust:central;
 .enjoy{
     margin-left: 400px;
 }
+#sain{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+}
+.conseil{
+    margin-top: 15px;
+  
+}
+.parallax {
+    /* The image used */
+    background-image: url('/home/isabeln/Images/create_parallax.jpg');
 
+    /* Full height */
+    height: 100%;
 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
