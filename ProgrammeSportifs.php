@@ -49,13 +49,7 @@ include 'header.php';
                 </a>
                 <h1> Bien être et meilleure qualité de vie </h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum, lectus in sollicitudin luctus, ex tortor fringilla nisi, at mollis orci elit at augue. Phasellus varius, ligula tempor lobortis auctor, lacus dui laoreet nisi, nec bibendum ex turpis at ante. Aliquam quis sem tincidunt, sagittis nisl a, mattis neque. Fusce eget feugiat dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi auctor scelerisque massa vel consectetur. Curabitur egestas elit vel sem tincidunt sodales. Curabitur hendrerit placerat turpis at suscipit. Maecenas id nunc elit.</p>
-            </figure>
-            <div class="col-md-8">
-                <div class="row">
-                    <figure class="col-md-3">
-
-                        </a>
-                    </figure>
+           
                 </div>
             </div>
         </div>

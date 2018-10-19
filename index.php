@@ -84,27 +84,15 @@ include 'header.php';
         </div>
     </div>
 </div> 
-<h2>Pratiquez votre sport où vous voulez quand vous voulez ? </h2>
 
-<div>
-    <label for="clientLocation">Où souhaitez vous pratiquez votre sport</label>
-    <input name="clientLocattion" placeholder="Où souhaitez-vous pratiquer ?" type="text" id="place" value="" />
-    <label for="activity"></label>
-    <select name='activity'>
-        <option>Fitness</option>
-        <option>Zumba</option>
-        <option>Musculation</option>
-        <option>Hip-Hop</option>
-        <option>Relaxation</option>
-        <option>Coach de Running</option>
-        <option>Perte de poids</option>
-        <option>Self-defense</option>
-        <option>Boxe</option>
-        <option>Yoga</option>
-    </select>
-    <button type="button" class="btn btn-outline-danger btn-rounded waves-effect fa fa-thumbs-up" aria-hidden="true"></button>
 </div>
+<h1>Partagez vos Activités</h1>
 
+<p>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach et la facture.</p>
+<?php
+include 'offres.php';
+?>
+</div>
 <?php
 include 'Footer.php';
 ?>
