@@ -80,22 +80,10 @@ alignment-adjust:central;
     margin-bottom: 20px;
     margin-left: 90px;
 }
-.conseil{
-    margin-top: 15px;
-  
+.explication{
+    margin-top: 20px
 }
-.parallax {
-    /* The image used */
-    background-image: url('/home/isabeln/Images/create_parallax.jpg');
 
-    /* Full height */
-    height: 100%;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 

@@ -43,8 +43,8 @@
                    
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-primary" href="http://thecoach/connexion.php" role="button" id="submit">Connexion</a>
-                    <a class="btn btn-primary" href="http://thecoach/inscription.php" role="button" id="submit">Inscription</a>
+                    <a class="btn btn-indigo" href="http://thecoach/connexion.php" role="button" id="submit">Connexion</a>
+                    <a class="btn btn-indigo" href="http://thecoach/inscription.php" role="button" id="submit">Inscription</a>
                 </form>
             </div>
         </nav> 

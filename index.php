@@ -1,4 +1,5 @@
 <?php
+//on y retrouve la navbar
 include 'header.php';
 ?>
 <!--Création d'un caroussel d'image de sport ou de sportif-->
@@ -29,14 +30,14 @@ include 'header.php';
     </a>
 </div>
 <div>
-    <!--création d'un bouton qui sommes nous permettant d'expliquer le site et le le role de MasterCoach-->
+    <!--création d'un bouton "qui-sommes nous" permettant d'expliquer le site et le le role de MasterCoach-->
     <a href="#quisommes-nous" class="btn btn btn-lg " tabindex="-1" role="button" id="quisommes-nous" onclick="hidden()">Qui sommes-nous ?</a>
     <!--insertion d'une bulle de texte-->
     <div id="Cadre">
         <div id="text">
-            <p> The Coach est une plateforme sportive qui permet de mettre en relation de façon simple et rapide un coach sportifs et ces futurs éléves . </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum, lectus in sollicitudin luctus, ex tortor fringilla nisi, at mollis orci elit at augue. Phasellus varius, ligula tempor lobortis auctor, lacus dui laoreet nisi, nec bibendum ex turpis at ante. Aliquam quis sem tincidunt, sagittis nisl a, mattis neque. Fusce eget feugiat dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi auctor scelerisque massa vel consectetur. Curabitur egestas elit vel sem tincidunt sodales. Curabitur hendrerit placerat turpis at suscipit. Maecenas id nunc elit. </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum, lectus in sollicitudin luctus, ex tortor fringilla nisi, at mollis orci elit at augue. Phasellus varius, ligula tempor lobortis auctor, lacus dui laoreet nisi, nec bibendum ex turpis at ante. Aliquam quis sem tincidunt, sagittis nisl a, mattis neque. Fusce eget feugiat dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi auctor scelerisque massa vel consectetur. Curabitur egestas elit vel sem tincidunt sodales. Curabitur hendrerit placerat turpis at suscipit. Maecenas id nunc elit. </p>
+            <p> The Coach est une plateforme sportive qui permet de mettre en relation de façon simple et rapide un coach sportif et ses futurs élèves .
+                L'originalité de The Coach vient du rôle actif qui est attribué à élève celui-ci peut quand il le souhaite proposer une activité à l'heure et à la date qu'il souhaite. Proposition ouverte à tous qui est effectif après validation d'un coach. Vous faites un choix selon vos envies et vos disponibilités, le coach s'adapte à votre demande le sport pourra être pratiqué à l'intérieur comme à l'extérieur. </p>     
+            <p>Inscrivez vous et découvrez tout les nombreux avantages mis à votre disposition.Venez découvrir votre plateforme participative et devenez l'acteur de votre réussite sportive</p>
         </div>
     </div>
 </div>
@@ -49,51 +50,84 @@ include 'header.php';
             <img class="card-img-top" src="assets/img/coach.jpg" alt="image  d'une coach" title="Coach" />
             <div class="card-body">
                 <h5 class="card-title">Programme sportif</h5>
-                <a href="http://thecoach/ProgrammeSportifs.php" class="btn btn-light">Programme</a>
+                <a href="http://thecoach/ProgrammeSportifs.php" class="btn btn-indigo">Programme</a>
             </div>
         </div>
     </div>
-    <!-- 2nd card por le programme alimentairef-->
+    <!-- 2nd card por le programme alimentaire-->
     <div class="col-lg-3">
         <div class="card">
             <img class="card-img-top" src="assets/img/healthy.jpg" alt="photo d'une assiette avec des aliments sains" title="assiette de produits sains"/>
             <div class="card-body">
                 <h5 class="card-title">Programme alimentaire</h5>
-                <a href="http://thecoach/ProgrammeAlimentaire.php" class="btn btn-light">Programme</a>
+                <a href="http://thecoach/ProgrammeAlimentaire.php" class="btn btn-indigo">Programme</a>
             </div>
         </div>
     </div>
-    <!-- 3rd card por le programme decouverte-->
+    <!-- 3ème card por le programme decouverte-->
     <div class="col-lg-3">
         <div class="card">
             <img class="card-img-top" src="assets/img/IMG-20180703-WA0014.jpg" alt="Coach entrain de parler à ces éléves" title="Coaching" />
             <div class="card-body">
                 <h5 class="card-title">Découverte</h5>
-                <a href="http://thecoach/Decouverte.php" class="btn btn-light">Découvrir</a>
+                <a href="http://thecoach/Decouverte.php" class="btn btn-indigo">Découvrir</a>
             </div>
         </div>
     </div>
-    <!-- 4th card por le programme d édiée aux entreprises et CE-->
+    <!-- 4ème card por le programme d édiée aux entreprises et CE-->
     <div class="col-lg-3"> 
         <div class="card">
             <img class="card-img-top" src="assets/img/entreprise.jpg" alt="sportifs soudant leurs mains" title="Groupe de sportif"/>
             <div class="card-body">
                 <h5 class="card-title">Société/Entreprise</h5>
-                <a href="http://thecoach/SocieteEntreprise.php" class="btn btn-light">Entreprise</a>
+                <a href="http://thecoach/SocieteEntreprise.php" class="btn btn-indigo">Entreprise</a>
             </div>
         </div>
     </div>
 </div> 
 
 </div>
+<!--Propositon d'activité de la part d'un client ou un coach peut proposer ces services et les clients peuveut s'inscrire-->
+<!--on a deux select pour choisir le sport et l'autre pour savoir si on veut pratiquer le sport en intérieur ou extérieur-->
 <h1>Partagez vos Activités</h1>
-
-<p>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach et la facture.</p>
+<div class="partagez">
+<h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
+<div class="select">
+    <div class="row">                       
+        <div class="col-md-3">
+  <label for="cours" id="cours">Cours/Sports</label>
+  <select name="cours" id="cours" class="form">
+            <option selected disabled>Veuillez selectionnez un sport</option>
+            <option value="1">Fitness</option>
+            <option value="2">Musculation</option>
+            <option value="3">Boxe</option>
+            <option value="4">Relaxation</option>
+            <option value="5">Pertes de poids</option>
+            <option value="6">Zumba</option>
+            <option value="7">Cardio</option>
+            <option value="8">Course à pieds</option>
+        </select>
+    </div>
+        
+          <div class="col-md-3">
+  <label for="cours" id="lieux">Lieux</label>
+  <select name="cours" id="lieux" class="form">
+            <option selected disabled>Veuillez selectionnez un lieux</option>
+            <option value="1">Intérieur</option>
+            <option value="2">Extérieur</option>
+        </select>
+    </div>
+        <div class="col-md-3">
+        <a href="#" role="" class="btn btn-indigo">Partagez</a>
+    </div>
+</div>
+</div>
 <?php
-include 'offres.php';
+//include 'offres.php';
 ?>
 </div>
 <?php
+//on y retrouve le footer
 include 'Footer.php';
 ?>
 <div>

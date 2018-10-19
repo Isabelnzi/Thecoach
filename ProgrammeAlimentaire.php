@@ -19,32 +19,30 @@ Selon les personnes, cela peut-être de simples petits réajustements pour trouv
   <div class="row">
     <div class="col-sm amber lighten-2">
         <h3>EN FONCTION DE VOS CONTRAINTES ET OBJECTIFS</h3>
-         <img src="assets/img/dart-board.png" alt="" title="" />
+         <img src="assets/img/dart-board.png" alt="une cible" title="cible" />
     </div>
       <div class="col-sm blue lighten-1">
           <h3>DES PROGRAMMES ALIMENTAIRES & SPORTIFS</h3>
-   <img src="assets/img/stopwatch.png" alt="" title="" />
+   <img src="assets/img/stopwatch.png" alt="un chronométre" title="chronométre" />
+    <a href="http://thecoach/ProgrammeSportifs.php" class="btn btn-indigo">Nos programmes</a>
     </div>
     <div class="col-sm amber lighten-2">
         <h3>UN PROGRAMME SUR-MESURE & A DISTANCE</h3>
-        <img src="assets/img/tools-and-utensils.png" alt="" title="" />
+        <img src="assets/img/tools-and-utensils.png" alt="un métre" title="métre" />
     </div>
     <div class="col-sm blue lighten-1">
         <h3>UN MODE DE VIE PLUS SAIN ET HEALTHY</h3> 
-      <img src="assets/img/apple.png" alt="" title="" />
+      <img src="assets/img/apple.png" alt="une pomme" title="pomme" />
+   <a  href="http://thecoach/recettes.php" class="btn btn-indigo ">Nos conseils</a>
     </div>
   </div>
 </div>
-<div>
+<div class="explication">
     <p>Mais un rééquilibrage alimentaire peut être vu de manière bien plus large. C’est également apprendre ou réapprendre à cuisiner, faire ses courses, s’organiser dans la fabrication des repas. C’est s’orienter petit à petit davantage vers des produits BRUTS pour délaisser les produits industriels. C’est favoriser les produits bio, locaux ou encore mieux, ceux du jardin !
 Rééquilibrer son alimentation c’est aussi retrouver le goût des vrais plaisirs : la pâtisserie fine du salon de thé qui vient remplacer les pâtisseries industrielles, le burger maison fait en famille qui piquera la vedette à l’habituel fast-food du dimanche soir ou encore la délicieuse pizza au feu de bois du pizzaiolo reconnu pour la qualité de ses produits qui remplacera aussitôt les pizzas des grandes chaines industrielles
 Vous l'avez compris, le rééquilibrage alimentaire n'implique pas seulement de changer son alimentation mais nécessite également de changer son mot de pensée et son style de vie. On vous rassure, nos patients (même les plus réticents) ne reviendraient pour rien au monde en arrière !
 </div>
-<div class="conseil ">
-    <a href="http://thecoach/conseilnutrition.php" class="btn btn-outline-warning waves-effect">Nos conseils en nutritions</a>
-    <a href="http://thecoach/ProgrammeSportifs.php" class="btn btn-outline-warning waves-effect">Nos programmes</a>
-<a  href="http://thecoach/recettes.php" class="btn btn-outline-warning waves-effect">Nos recettes</a>
-</div>
+
 
     <?php
     include 'Footer.php';

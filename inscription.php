@@ -38,7 +38,7 @@
 
                     <div class="container">
                         <!--formulaire demandant une liste déroulante(Mr ou Mme), nom, prénom age et société rediriger vers la page index.php-->
-                        <h2><span class="badge badge-pill badge-warning">Formulaire d'inscription</span></h2>
+                        <h1><span class="badge-warning">Formulaire d'inscription</span></h1>
                         <div class="form-group">
                             <label for="civility">Civilité : *</label>
                             <Select class="form-control is-valid" name="civility" id="civility">
