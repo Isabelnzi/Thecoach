@@ -14,58 +14,73 @@ include 'header.php';
         </div>
     </div>
 </div>
-<div class="section">
-<div class="form-group">
-    <div class="col-md-2">
-  <label for="cours" class="col-md-4 control-label">Cours/Sports</label>
-  <select name="cours" id="cours" class="form">
-            <option value="">Veuillez selectionnez un sport</option>
-            <option value="">Fitness</option>
-            <option value="">Musculation</option>
-            <option value="">Boxe</option>
-            <option value="">Relaxation</option>
-            <option value="">Pertes de poids</option>
-            <option value="">Zumba</option>
-            <option value="">Cardio</option>
-            <option value="">Course à pieds</option>
-        </select>
-    </div>
-    <div class="col-md-2">
-       <label for="nbPersonnes" class="col-md-4 control-label">Nombres de personnes</label>
-       
-        <select name="nbPersonnes" id="nbPersonnes" class="form">
-            <option value="">1 à 4 personnes</option>
-            <option value="">5 à 10 personnes</option>
-            <option value="">plus de 10 personnes</option>   
-        </select>
-    </div>
-    <div class="col-md-2">
-            <label for="durée" class="col-md-4 control-label">Durée de la séance</label>
-        <select name="durée" id="durée" class="form">
-            <option value="">1h</option>
-            <option value="">1h30</option>
-            <option value="">2h</option>   
-        </select>
-    </div>
-    <div class="col-md-2">
-            <label for="fréquence" class="col-md-4 control-label">Fréquence</label>
-        <select name="fréquence" id="fréquence" class="form">
-            <option value="">1 fois par semaine</option>
-            <option value="">2 fois par semaine</option>
-            <option value="">1 semaine sur deux</option>   
-            <option value="">plus de deux fois par semaine</option>   
-        </select>
-</div>     
-    <div class="col-md-2">
-    <p>Votre devis en une minute.Votre projet à portée de main.Renseignez les détails de votre projet sportif et obtenez ue offre en ligne instantanément.
-        Vous ne vous occupez de rien : le matériel est inclus.The Coach saura vous trouver le bon coach pour votre entreprise.Pour plus d’information   
+
+ 
+    <h2 class="text-center">Prise de rendez-vous</h2>
+<div class="row justify-content-center m-5">
+    <form class="col-md-10" action="#" method="POST">
+        <div class="form">
+            <label class="col-md-6" for="lastname">Nom société : </label>
+            <input class="col-md-5" type="text" name="lastname" value="" />
+            <?php
+            if (isset($formError['lastname']))
+            {
+                ?>
+                <p class="text-danger"><?= $formError['lastname'] ?></p>
+            <?php } ?>
+        </div>
+        <div class="form">
+            <label class="col-md-6" for="firstname">Nom responsable : </label>
+            <input class="col-md-5" type="text" name="firstname" value="" />
+            <?php
+            if (isset($formError['firstname']))
+            {
+                ?>
+                <p class="text-danger"><?= $formError['firstname'] ?></p>
+            <?php } ?>
+        </div>
+         <div class="form">
+            <label class="col-md-6" for="phoneNumber">Numéro de téléphone : </label>
+            <input class="col-md-5" type="text" name="phoneNumber" value="" />
+            <?php
+            if (isset($formError['firstname']))
+            {
+                ?>
+                <p class="text-danger"><?= $formError['firstname'] ?></p>
+            <?php } ?>
+        </div>
+        
+        <div class="form">
+            <label class="col-md-6" for="date">Date du rendez-vous : </label>
+            <input class="col-md-5" type="date" id="date" name="date" value="" />
+            <?php
+            if (isset($formError['appointmentDate']))
+            {
+                ?>
+                <p class="text-danger"><?= $formError['appointmentDate'] ?></p>
+            <?php } ?>
+        </div>
+        <div class="form">
+            <label class="col-md-6" for="hour">Heure du rendez-vous : </label>
+            <input class="col-md-5" type="time" id="hour" name="hour" value="" />
+            <?php
+            if (isset($formError['appointmentHour']))
+            {
+                ?>
+                <p class="text-danger"><?= $formError['appointmentHour'] ?></p>
+            <?php } ?>
+        </div>
+</div>
+        <div class="text-center">
+            <input class="col-md-4" type="submit" name="submitAppointment" value="Soumettre" />
+        </div>
+    </form>
+    <div class="col-md-6">
+    <p>Votre voulez en savoir plus sur The Coach. Prenez donc rendez-vous pour nous exposer votre projet, vos besoins et vos envies. Nous sommes à votre disposition pour répondre à vos questions.
+Vous ne vous occupez de rien : le matériel est inclus. The Coach saura vous trouver le bon coach. Pour plus d’informations nous contactez .
 </p>
 </div>
-</div>
-<div>
-</div>
-</div>
-</div>
+
     <?php
     include 'Footer.php';
     ?>

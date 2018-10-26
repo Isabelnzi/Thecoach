@@ -33,7 +33,7 @@ Selon les personnes, cela peut-être de simples petits réajustements pour trouv
     <div class="col-sm blue lighten-1">
         <h3>UN MODE DE VIE PLUS SAIN ET HEALTHY</h3> 
       <img src="assets/img/apple.png" alt="une pomme" title="pomme" />
-   <a  href="http://thecoach/recettes.php" class="btn btn-indigo ">Nos conseils</a>
+   <a  href="http://thecoach/conseils.php" class="btn btn-indigo ">Nos conseils</a>
     </div>
   </div>
 </div>

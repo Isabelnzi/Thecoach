@@ -86,7 +86,6 @@ include 'header.php';
     </div>
 </div> 
 
-</div>
 <!--Propositon d'activité de la part d'un client ou un coach peut proposer ces services et les clients peuveut s'inscrire-->
 <!--on a deux select pour choisir le sport et l'autre pour savoir si on veut pratiquer le sport en intérieur ou extérieur-->
 <h1>Partagez vos Activités</h1>
@@ -94,7 +93,7 @@ include 'header.php';
 <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
 <div class="select">
     <div class="row">                       
-        <div class="col-md-3">
+        <div class="col-md-1">
   <label for="cours" id="cours">Cours/Sports</label>
   <select name="cours" id="cours" class="form">
             <option selected disabled>Veuillez selectionnez un sport</option>
@@ -109,7 +108,7 @@ include 'header.php';
         </select>
     </div>
         
-          <div class="col-md-3">
+          <div class="col-md-1">
   <label for="cours" id="lieux">Lieux</label>
   <select name="cours" id="lieux" class="form">
             <option selected disabled>Veuillez selectionnez un lieux</option>
@@ -117,10 +116,9 @@ include 'header.php';
             <option value="2">Extérieur</option>
         </select>
     </div>
-        <div class="col-md-3">
+        <div class="col-md-1">
         <a href="#" role="" class="btn btn-indigo">Partagez</a>
     </div>
-</div>
 </div>
 <?php
 //include 'offres.php';
