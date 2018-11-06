@@ -1,9 +1,15 @@
-// object-fit polyfill run
-objectFitImages();
+$("#city").on('keyup', function() {
+    var code = $(this).val();
+    var request = $.ajax({
+        // Ce qui donnera fichier sql
+        url: "{{URL::to('/recupCodePostal')}}/",
+        method: "POST",
+        data: {
+            code: code
+        },
+        dataType: "json"
+    });
 
-/* init Jarallax */
-jarallax(document.querySelectorAll('.jarallax'));
-
-jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-    keepImg: true
-});
+    request.done(function(result) {
+        //traitement de ton JSON
+    });

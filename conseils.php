@@ -6,6 +6,7 @@ include 'header.php';
     Recettes pour les sportifs
     Après l’effort, le réconfort ! Chez les sportifs, la nutrition fait partie intégrante de la préparation physique, comme de la récupération. Vous venez de vous dépenser ? Ne négligez pas l’encas post-training ! Vous avez un entrainement dans quelques heures ? N’oubliez pas de vous restaurer en amont avec un repas digeste ! Les produits au soja sont reconnus pour leur digestibilité et pour leur apport en protéines végétales : des qualités nutritionnelles souvent recherchées par les pratiquants de sports car synonyme de performance.  En manque d’inspiration ? Vous trouverez ici nos meilleures astuces et recettes spéciales sportifs et sportives.
 </p>
+<img class="col-md-6" src="assets/img/courir-course-silhouette-ensemble_23-2147494414.jpg" alt="icone silhouette de sportifs" title="sportifs" />
 <p>
 
 <h2>Premier « vrai/faux » de notre série, découvrez quelques vérités souvent erronées sur un sujet plus que jamais d’actualité : l’alimentation équilibrée !</h2>
@@ -30,14 +31,14 @@ include 'header.php';
 <h3>Tous les lipides se valent</h3>
 
 <p><span class='astuces'>FAUX :</span> Certains sont à éviter et d’autres sont indispensables. Les fameux Oméga 3 et Oméga 6  font partie des « Acides Gras Essentiels » à notre organisme car il ne peut les fabriquer lui-même. Il est donc important de consommer un poisson gras (saumon, sardine, maquereau, thon) deux fois par semaine et certaines huiles végétales quotidiennement (colza, noix, soja, lin, chanvre).</p>
-<h2>Recette du jour</h2>
+<h1>Recette du jour</h1>
 <h3>Un petit déjeuner complet</h3>
 <p>
     Que ce soit pour votre bien-être ou pour la performance, sport et alimentation vont toujours de pair ! Mais que manger la veille d’une compet’, ou en rentrant de son entraînement ? Découvrez nos recettes concoctées spécialement pour vous donner la pêche en toute circonstance !
 
     Du petit déjeuner au dîner, sans oublier les petits encas pour recharger ses batteries, découvrez chaque mois une nouvelle recette concoctée par notre nutritionniste. Réalisées, testées et approuvées, ces recettes vont réveiller l’Athlète du Bien-être qui est en vous !</p>
 
-<img src="assets/img/poridge.jpg" alt='bol de poridge' title='poridge'/>
+<img class="dejeuner" src="assets/img/poridge.jpg" alt='bol de poridge' title='poridge'/>
 
 <p>Le + nutrition 
 Pourquoi c’est bon ?

@@ -1,4 +1,5 @@
 <?php
+
 //définir un cookie qui sera envoyé 
 if (!empty($_POST)) {
     setcookie('login', $_POST['login'], time() + (60 * 60 * 24 * 30));
@@ -23,30 +24,19 @@ if (!empty($_POST['password'])) {
             include 'header.php';
             ?>
         </div>
-        <div class="container" id="connexion">
-            <div class="row">
-                <div class="form input-group  mt-4 mb-4">
-                        <form action="index.php" method="POST">
-                            <div class="block">
-                                <h1>Se connecter à The Coach</h1>
-                            <div>
-                                <label for="login">Identifiant</label>
-                                <input type="text" class="form-control" name="login" id="login" placeholder="Adresse mail ou Identifiant" />
-                            </div>
-                            <div>
-                                <label for="password">Mot de passe</label>
-                                <input type="text" name="password" class="form-control" class="password" placeholder="Mot de passe"/>
-                            </div>
-                            <div>
-                                <input type="submit" name="submit" id="btnConnexion" value="Connexion">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+         
+        <form action="#" method="POST">
+            <label for="login"><?= FORM_LOGIN ?></label>
+            <input type="text" name="login" id="login" />
+            <label for="password"><?= FORM_PASSWORD ?></label>
+            <input type="password" name="password" id="password" />
+            <input type="submit" value="<?= FORM_LOGIN_SUBMIT ?>" name="loginSubmit" id="loginSubmit" />
+        </form>
+        <?php if($message != '') { ?>
+            <p><?= $message ?></p>
+        <?php } ?>
+    </body>
+</html>
     <?php
     include 'Footer.php';
     ?>

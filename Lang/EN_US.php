@@ -10,6 +10,7 @@ define('REGISTER_LASTNAME','Lastname :');
 define('REGISTER_FIRSTNAME','Firstname :');
 define('REGISTER_MAIL','E-mail :');
 define('REGISTER_LOGIN','Login :');
+define('REGISTER_BIRTHDATE','Date de naissance:');
 define('REGISTER_PASSWORD','Password :');
 define('REGISTER_PASSWORD_VERIFY','Password (verify) :');
 define('REGISTER_SUBMIT','Register');
