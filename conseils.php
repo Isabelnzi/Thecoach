@@ -67,6 +67,6 @@ Astuces
 Idéalement, à commencer la veille au soir, pour déguster frais au petit déjeuner du lendemain. Voilà un « porridge overnight » sympa pour un réveil frais et gourmand ! Vous pouvez également vous faire plaisir en testant cette recette avec d’autres fruits ou  d’autres boissons  SOJASUN !
 </p>
 <?php
-include 'Footer.php';
+include 'footer.php';
 ?>
     

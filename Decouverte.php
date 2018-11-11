@@ -18,7 +18,7 @@ include 'header.php';
 <p><iframe class="embed-responsive embed-responsive-16by9" src="assets/img/4470491-preview.mp4" allowfullscreen="" width="200" height="281" frameborder="0"></iframe></p>
 <div>
     <?php
-    include 'Footer.php';
+    include 'footer.php';
     ?>
     <div>
 

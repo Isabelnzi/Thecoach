@@ -1,32 +1,19 @@
 <?php
-
+include_once 'header.php';
+include_once 'controllers/connexionCtrl.php';
+include 'controllers/headerCtrl.php';
 //définir un cookie qui sera envoyé 
-if (!empty($_POST)) {
-    setcookie('login', $_POST['login'], time() + (60 * 60 * 24 * 30));
-}
-if (!empty($_POST['password'])) {
-    setcookie('password', $_POST['password'], time() + (60 * 60 * 24 * 30));
-}
+//if (!empty($_POST)) {
+   // setcookie('login', $_POST['login'], time() + (60 * 60 * 24 * 30));
+//}
+//if (!empty($_POST['password'])) {
+    //setcookie('password', $_POST['password'], time() + (60 * 60 * 24 * 30));
+//}
 ?>
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="assets/css/style.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> 
-        <title>Connexion</title>
-    </head>
-    <body>
-        <div>
-            <?php
-            include 'header.php';
-            ?>
-        </div>
-         
-        <form action="#" method="POST">
+
+               
             <label for="login"><?= FORM_LOGIN ?></label>
+        <form action="#" method="POST">
             <input type="text" name="login" id="login" />
             <label for="password"><?= FORM_PASSWORD ?></label>
             <input type="password" name="password" id="password" />
@@ -38,7 +25,7 @@ if (!empty($_POST['password'])) {
     </body>
 </html>
     <?php
-    include 'Footer.php';
+    include 'footer.php';
     ?>
     <div>
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

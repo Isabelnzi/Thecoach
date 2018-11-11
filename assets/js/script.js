@@ -1,15 +1,15 @@
-$("#city").on('keyup', function() {
-    var code = $(this).val();
-    var request = $.ajax({
-        // Ce qui donnera fichier sql
-        url: "{{URL::to('/recupCodePostal')}}/",
-        method: "POST",
-        data: {
-            code: code
-        },
-        dataType: "json"
+$(function () {
+    $("#zipCode").keyup(function () {
+        $.post('../../controllers/registerCtrl.php', {
+            zipCodeSearch: $('#zipCode').val()
+        }, function (cityName) {
+            $("#city").empty();
+            $.each(cityName, function (cityKey, cityValue) {
+                //la fonction each permet de parcourir les éléments de cityName
+                $("#city").append('<option value=" '+ cityValue.id +'">' + cityValue.cityName + ' ' +  '</option>')});
+        }, 'JSON');
     });
+});
 
-    request.done(function(result) {
-        //traitement de ton JSON
-    });
+
+

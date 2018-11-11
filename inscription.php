@@ -1,5 +1,5 @@
 <!--insere le controleur du formulaire ou se trouve tout le code PHP-->
-<?php include 'Controllers/controllerINscription.php' ?>
+<?php include 'controllers/controllerINscription.php' ?>
 
         <!--affiche les resultat si aucune érreur est compté dans le tableau-->
         <?php if (isset($_POST['submit']) && (count($formError) === 0)) { ?>

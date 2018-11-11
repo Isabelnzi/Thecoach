@@ -126,7 +126,7 @@ include 'header.php';
 </div>
 <?php
 //on y retrouve le footer
-include 'Footer.php';
+include 'footer.php';
 ?>
 <div>
 

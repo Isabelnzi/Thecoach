@@ -12,7 +12,7 @@ define('REGISTER_EMAIL','Adresse mail :');
 define('REGISTER_PHONENUMBER','Numéro de téléphone :');
 define('REGISTER_BIRTHDATE','Date de naissance:');
 define('REGISTER_CITY','Ville:');
-define('REGISTER_ZIPCODE','Code postale:');
+define('REGISTER_ZIPCODE','Code postal:');
 define('REGISTER_ADDRESS','Adresse :');
 define('REGISTER_LOGIN','Identifiant :');
 define('REGISTER_PASSWORD','Mot de passe :');
@@ -33,6 +33,7 @@ define('USER_CONNECTION_ERROR','Erreur lors de la connexion');
 //Menu
 define('NAV_WELCOME','Bienvenue %s');
 define('NAV_CONNECT','Connexion');
+define('NAV_PROFILE','profil');
 define('NAV_DISCONNECT','Déconnexion');
 define('NAV_LANGUAGE','Choix de la langue');
 define('NAV_FRENCH','Français');

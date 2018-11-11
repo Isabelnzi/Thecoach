@@ -44,7 +44,7 @@ include 'header.php';
 </div>
 <div>
     <?php
-    include 'Footer.php';
+    include 'footer.php';
     ?>
     <div>
 

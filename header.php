@@ -1,4 +1,7 @@
-<?php include_once 'Lang/FR_FR.php';
+<?php
+session_start();
+include 'lang/FR_FR.php';
+include 'controllers/headerCtrl.php';
 ?>
 <!Doctype html>
 <html>
@@ -13,8 +16,7 @@
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Monoton" rel="stylesheet">
-        <script src="assets/js/script.js"></script>
-        <title>ProjetPro</title>
+        <title><?= ($_SERVER['PHP_SELF']) == '/header.php' ? LOGIN_TITLE : REGISTER_TITLE ?></title>
         <!--création d'une navbar-->
     <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning ">
@@ -45,9 +47,21 @@
 
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-indigo" href="http://thecoach/connexion.php" role="button" id="submit">Connexion</a>
-                    <a class="btn btn-indigo" href="http://thecoach/register.php" role="button" id="submit">Inscription</a>
-
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <?php if (!isset($_SESSION['isConnect'])) { ?>
+                                <a class="btn btn-indigo" href="http://thecoach/connexion.php" role="button" id="submit"><?= NAV_CONNECT ?></a>
+                            <?php } else { ?>
+                                <a class = "nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><?= sprintf(NAV_WELCOME, $_SESSION['firstname']) ?></a> 
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    
+                                    <a class="dropdown-item" href="http://thecoach/profile.php" <?= $_SERVER['PHP_SELF'] ?>?action=profile"><?= NAV_PROFILE ?></a>
+                                    <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?action=disconnect"><?= NAV_DISCONNECT ?></a>
+                                </div>
+                            <?php }
+                            ?>
+                        </li>  
+                        <a class="btn btn-indigo" href="http://thecoach/register.php" role="button" id="submit">Inscription</a>
                 </form>
             </div>
         </nav> 

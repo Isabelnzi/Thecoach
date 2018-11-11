@@ -1,6 +1,6 @@
 <?php
-include 'Models/offresm.php';
-include 'Controllers/offresCtl.php'
+include 'models/offresm.php';
+include 'controllers/offresCtl.php'
 ?>
 <form action="offres.php" method="post">
 <table>

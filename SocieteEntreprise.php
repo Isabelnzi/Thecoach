@@ -82,7 +82,7 @@ Vous ne vous occupez de rien : le matériel est inclus. The Coach saura vous tro
 </div>
 
     <?php
-    include 'Footer.php';
+    include 'footer.php';
     ?>
     <div>
         s

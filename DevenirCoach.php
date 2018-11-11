@@ -37,7 +37,7 @@
 </main>
 <!-- Main layout -->
 <?php
-include 'Footer.php';
+include 'footer.php';
 ?>
 <div>
 
