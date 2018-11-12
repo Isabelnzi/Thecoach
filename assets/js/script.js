@@ -7,6 +7,7 @@ $(function () {
             $.each(cityName, function (cityKey, cityValue) {
                 //la fonction each permet de parcourir les éléments de cityName
                 $("#city").append('<option value=" '+ cityValue.id +'">' + cityValue.cityName + ' ' +  '</option>')});
+            //la fonction append permet de récupérer le nom des villes dans mon select
         }, 'JSON');
     });
 });

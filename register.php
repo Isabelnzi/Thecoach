@@ -104,7 +104,7 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
                             <div class="md-form">
                                 <label for="city"><?= REGISTER_CITY ?></label>
                                 <select name = "city" id="city" >
-                                    <option selected disabled>Veuillez selectionner une ville</option>
+                                    <option selected disabled>Choisir une ville</option>
                                     <?php foreach ($cityName as $cityValue) { ?>
                                         <option value="<?= $cityValue->cityValue.id ?>"></option>
                                         

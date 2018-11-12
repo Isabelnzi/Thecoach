@@ -55,7 +55,7 @@ include 'controllers/headerCtrl.php';
                                 <a class = "nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><?= sprintf(NAV_WELCOME, $_SESSION['firstname']) ?></a> 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     
-                                    <a class="dropdown-item" href="http://thecoach/profile.php" <?= $_SERVER['PHP_SELF'] ?>?action=profile"><?= NAV_PROFILE ?></a>
+                                    <a class="dropdown-item" href="http://thecoach/profile.php?id=<?= $_SESSION['id'] ?>"><?= NAV_PROFILE ?></a>
                                     <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?action=disconnect"><?= NAV_DISCONNECT ?></a>
                                 </div>
                             <?php }

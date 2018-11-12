@@ -11,12 +11,13 @@ include 'controllers/headerCtrl.php';
 //}
 ?>
 
-               
+    <!-- Email -->
+        <form action="#" method="POST" class="text-center border border-light p-5">
+            <h1 class="h4 mb-4">S'inscrire</h1>
             <label for="login"><?= FORM_LOGIN ?></label>
-        <form action="#" method="POST">
-            <input type="text" name="login" id="login" />
+            <input type="text" name="login" id="login" class="form mb-4"/>
             <label for="password"><?= FORM_PASSWORD ?></label>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" class="form mb-4"/>
             <input type="submit" value="<?= FORM_LOGIN_SUBMIT ?>" name="loginSubmit" id="loginSubmit" />
         </form>
         <?php if($message != '') { ?>

@@ -13,10 +13,8 @@ if (isset($_POST['zipCodeSearch'])) {
     $regexzipCode = '/^[0-9]{5}$/';
     $regexName = '/^[a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\-]+$/';
     $regexDate = '/^[0-9]{4}-[0-9]{2}-[0-9]{2}/';
-    $regexText = '/^[a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\-\ \.\,\?\:\!]+$/';
     $regexMail = '/^[A-z0-9._%+-]+[\@]{1}[A-z0-9.-]+[\.]{1}[A-z]{2,4}$/';
     $regexAddress = '/^[A-z\ 0-9\']+$/';
-    $regexNumberLetter = '/^[0-9A-z]+$/';
     $regexNumber = '/^[0-9-a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\- ]+$/';
     $formError = array();
 //condition pour le formulaire
