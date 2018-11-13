@@ -10,7 +10,7 @@ $profil->id = $_GET['id'];
  * On appelle la méthode getProfilUserById à la fin du code pour que l'affichage soit instantanée.
  */
 //déclaration de la regex pour les noms
-$regexphoneNumber = '/^[0][1-9][0-9]{8}$/';
+$regexphone = '/^[0][1-9][0-9]{8}$/';
 $regexzipCode = '/^[0-9]{5}$/';
 $regexName = '/^[a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\-]+$/';
 $regexDate = '/^[0-9]{4}-[0-9]{2}-[0-9]{2}/';
@@ -19,9 +19,8 @@ $regexNumber = '/^[0-9-a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûü�
 
 //déclaration du tableau d'erreur
 $formError = array();
-
+//condition pour récupérer les données de l'utilisateur
 if (isset($_POST['submit'])) {
-
     if (!empty($_POST['lastname'])) {
         if (preg_match($regexName, $_POST['lastname'])) {
             $lastname = htmlspecialchars($_POST['lastname']);
@@ -42,18 +41,18 @@ if (isset($_POST['submit'])) {
         $formError['firstname'] = 'Veuillez indiquer votre prénom';
     }
 
-    if (!empty($_POST['birthdate'])) {
-        if (preg_match($regexDate, $_POST['birthdate'])) {
-            $birthdate = htmlspecialchars($_POST['birthdate']);
+    if (!empty($_POST['birthDate'])) {
+        if (preg_match($regexDate, $_POST['birthDate'])) {
+            $birthDate = htmlspecialchars($_POST['birthDate']);
         } else {
-            $formError['birthdate'] = 'La saisie de votre date de naissance est invalide';
+            $formError['birthDate'] = 'La saisie de votre date de naissance est invalide';
         }
     } else {
-        $formError['birthdate'] = 'Veuillez indiquer votre date de naissance';
+        $formError['birthDate'] = 'Veuillez indiquer votre date de naissance';
     }
 
     if (!empty($_POST['phoneNumber'])) {
-        if (preg_match($regexPhoneNumber, $_POST['phoneNumber'])) {
+        if (preg_match($regexphone, $_POST['phoneNumber'])) {
             $phoneNumber = htmlspecialchars($_POST['phoneNumber']);
         } else {
             $formError['phoneNumber'] = 'La saisie de votre numéro de téléphone est invalide';
@@ -61,6 +60,7 @@ if (isset($_POST['submit'])) {
     } else {
         $formError['phoneNumber'] = 'Veuillez indiquer votre numéro de téléphone';
     }
+    
     if (!empty($_POST['zipCode'])) {
         if (preg_match($regexNumber, $_POST['zipCode'])) {
             $zipCode = htmlspecialchars($_POST['zipCode']);
@@ -70,6 +70,7 @@ if (isset($_POST['submit'])) {
     } else {
         $formError['zipCode'] = 'Veuillez indiquer votre code postal';
     }
+    
     if (!empty($_POST['city'])) {
         //regex number car on récupére l'id de la ville
         if (preg_match($regexNumber, $_POST['city'])) {
@@ -89,9 +90,9 @@ if (isset($_POST['submit'])) {
 
     if (count($formError) == 0) {
         // Récupération de la valeur de l'id dans le paramètre de l'url
-        $profil->id = $_GET['id'];
-        if (!$profil->updateUserProfil()) {
-            $formError['submit'] = 'Il y a eu un problème';
+            $modifyUser->id = $_GET['id'];
+        if (!$modifyUser->updateUserProfil()) {
+            $formError['submitModify'] = 'Il y a eu un problème';
         }
     }
 }

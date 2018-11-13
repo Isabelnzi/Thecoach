@@ -25,7 +25,7 @@ include 'controllers/profileCtrl.php';
                     </ul>
                 </div>
             </div>
-         <!--Page permettant de récupérer les données de l'utilisateur en utilisant la méthode POST--> 
+         <!--Page permettant de récupérer les données de l'utilisateur enregistrer dans le formulaire en utilisant la méthode POST--> 
             <div class="form-group">
                 <div class="row">
                 <label for="lastname">Nom </label>
@@ -38,37 +38,37 @@ include 'controllers/profileCtrl.php';
                 <?php if (isset($formError['firstname'])) { ?>
                     <p class="text-danger"><?= isset($formError['firstname']) ? $formError['firstname'] : '' ?></p>
                 <?php } ?>
-                <label for="birthdate">Date de naissance</label>
-                <input type="date" class="form-control" name="birthdate" id="birthdate" value="<?= $profilUser->birthdate ?>"/>
-                <?php if (isset($formError['birthdate'])) { ?>
-                    <p class="text-danger"><?= isset($formError['birthdate']) ? $formError['birthdate'] : '' ?></p>
+                <label for="birthDate">Date de naissance</label>
+                <input type="date" class="form-control" name="birthDate" id="birthDate" value="<?= $profilUser->birthDate ?>"/>
+                <?php if (isset($formError['birthDate'])) { ?>
+                    <p class="text-danger"><?= isset($formError['birthDate']) ? $formError['birthDate'] : '' ?></p>
                 <?php } ?>
-                <label for="mail">Adresse email</label>
-                <input type="text" class="form-control" name="mail" id="mail" placeholder="Adresse mail" value="<?= $profilUser->email ?>"/>
+                <label for="email">Adresse email</label>
+                <input type="text" class="form-control" name="email" id="email" placeholder="Adresse mail" value="<?= $profilUser->email ?>"/>
                 <?php if (isset($formError['email'])) { ?>
                     <p class="text-danger"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
                 <?php } ?>
-                <label for="phone">Téléphone</label>
-                <input type="text" class="form-control" name="phone" id="phone" placeholder="Téléphone" value="<?= $profilUser->phoneNumber ?>"/>
+                <label for="phoneNumber">Téléphone</label>
+                <input type="text" class="form-control" name="phoneNumber" id="phone" placeholder="Téléphone" value="<?= $profilUser->phoneNumber ?>"/>
                 <?php if (isset($formError['phoneNumber'])) { ?>
                     <p class="text-danger"><?= isset($formError['phoneNumber']) ? $formError['phoneNumber'] : '' ?></p>
                 <?php } ?>
                 <label for="address">Adresse</label>
-                <input type="text" class="form-control" name="address" id="phone" placeholder="address" value="<?= $profilUser->address ?>"/>
+                <input type="text" class="form-control" name="address" id="phone" placeholder="Adresse" value="<?= $profilUser->address ?>"/>
                 <?php if (isset($formError['address'])) { ?>
                     <p class="text-danger"><?= isset($formError['address']) ? $formError['address'] : '' ?></p>
                 <?php } ?>
-                <label for="city">Ville</label>
-                <input type="text" class="form-control" name="city" id="city" placeholder="city" value="<?= $profilUser->city ?>"/>
-                <?php if (isset($formError['city'])) { ?>
-                    <p class="text-danger"><?= isset($formError['city']) ? $formError['city'] : '' ?></p>
+                <label for="cityName">Ville</label>
+                <input type="text" class="form-control" name="cityName" id="city" placeholder="Ville" value="<?= $profilUser->cityName ?>"/>
+                <?php if (isset($formError['cityName'])) { ?>
+                    <p class="text-danger"><?= isset($formError['cityName']) ? $formError['cityName'] : '' ?></p>
                 <?php } ?>
                 <label for="zipCode">Code Postal</label>
-                <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="code postal" value="<?= $profilUser->zipCode ?>"/>
+                <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="Code postal" value="<?= $profilUser->zipCode ?>"/>
                 <?php if (isset($formError['zipCode'])) { ?>
                     <p class="text-danger"><?= isset($formError['zipCode']) ? $formError['zipCode'] : '' ?></p>
                 <?php } ?>
-                <input type="submit" name="submit" id="submit" value="MODIFICATION"/>
+                <input type="submit" name="submit" id="submitModify" value="MODIFICATION"/>
             </div> 
                     </div>
            

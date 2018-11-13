@@ -24,7 +24,6 @@ include 'controllers/headerCtrl.php';
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
 
@@ -54,7 +53,7 @@ include 'controllers/headerCtrl.php';
                             <?php } else { ?>
                                 <a class = "nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><?= sprintf(NAV_WELCOME, $_SESSION['firstname']) ?></a> 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    
+
                                     <a class="dropdown-item" href="http://thecoach/profile.php?id=<?= $_SESSION['id'] ?>"><?= NAV_PROFILE ?></a>
                                     <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?action=disconnect"><?= NAV_DISCONNECT ?></a>
                                 </div>

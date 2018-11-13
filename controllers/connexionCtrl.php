@@ -23,7 +23,7 @@ if(count($formError) == 0){
     if($user->userConnection()){
         if(password_verify($password, $user->password)){
             //la connexion se fait
-            header('location:index.php');
+            header('location:index.php');//redirection
             $message = USER_CONNECTION_SUCCESS;
             //On rempli la session avec les attributs de l'objet issus de l'hydratation
             $_SESSION['login'] = $user->login;

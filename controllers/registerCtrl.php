@@ -16,7 +16,7 @@ if (isset($_POST['zipCodeSearch'])) {
     $regexMail = '/^[A-z0-9._%+-]+[\@]{1}[A-z0-9.-]+[\.]{1}[A-z]{2,4}$/';
     $regexAddress = '/^[A-z\ 0-9\']+$/';
     $regexNumber = '/^[0-9-a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\- ]+$/';
-    $formError = array();
+    $formError = array();//tableau d'erreur
 //condition pour le formulaire
     if (isset($_POST['register'])) {
         if (!empty($_POST['lastname'])) {
@@ -48,14 +48,14 @@ if (isset($_POST['zipCodeSearch'])) {
         } else {
             $formError['address'] = 'Veuillez indiquer votre adresse';
         }
-        if (!empty($_POST['birthdate'])) {
-            if (preg_match($regexDate, $_POST['birthdate'])) {
-                $birthdate = htmlspecialchars($_POST['birthdate']);
+        if (!empty($_POST['birthDate'])) {
+            if (preg_match($regexDate, $_POST['birthDate'])) {
+                $birthDate = htmlspecialchars($_POST['birthDate']);
             } else {
-                $formError['birthdate'] = 'La saisie de votre Date de naissance est invalide';
+                $formError['birthDate'] = 'La saisie de votre Date de naissance est invalide';
             }
         } else {
-            $formError['birthdate'] = 'Veuillez indiquer votre Date de naissance';
+            $formError['birthDate'] = 'Veuillez indiquer votre Date de naissance';
         }
         if (!empty($_POST['zipCode'])) {
             if (preg_match($regexzipCode, $_POST['zipCode'])) {
@@ -112,7 +112,7 @@ if (isset($_POST['zipCodeSearch'])) {
         }
 
         if (!empty($_POST['password']) && !empty($_POST['passwordVerify']) && $_POST['password'] == $_POST['passwordVerify']) {
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);//password_hash permet le hashage du mot de passe dans la base de donn"ée
             //si les champs sont vides ou s'il ne sont pas identiques affichage d'un message d'erreur
         } else {
             $formError['password'] = 'Veuillez vérifier votre mot de passe';
@@ -122,7 +122,7 @@ if (isset($_POST['zipCodeSearch'])) {
             $user = new users();
             $user->lastname = $lastname;
             $user->firstname = $firstname;
-            $user->birthdate = $birthdate;
+            $user->birthDate = $birthDate;
             $user->phoneNumber = $phoneNumber;
             $user->email = $email;
             $user->password = $password;

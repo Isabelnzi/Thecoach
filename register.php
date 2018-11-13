@@ -8,7 +8,7 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
         <h1>Votre inscription a bien été prise en compte !</h1>
         <p><?= $_POST['lastname'] ?></p>
         <p><?= $_POST['firstname'] ?></p>
-        <p><?= $_POST['birthdate'] ?></p>
+        <p><?= $_POST['birthDate'] ?></p>
         <p><?= $_POST['email'] ?></p>
         <p><?= $_POST['phoneNumber'] ?></p>
         <p><?= $_POST['address'] ?></p>
@@ -63,9 +63,9 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
 
                             <!-- Date de naissance -->
                             <div class="md-form mt-0">
-                                <label for="birthdate"><?= REGISTER_BIRTHDATE ?></label>
-                                <input id="birthdate" type="date" name="birthdate" value="<?= isset($birthdate) ? $birthdate : '' ?>" />
-                                <p class="text-danger"><?= isset($formError['birthdate']) ? $formError['birthdate'] : ''; ?></p>
+                                <label for="birthDate"><?= REGISTER_BIRTHDATE ?></label>
+                                <input id="birthDate" type="date" name="birthDate" value="<?= isset($birthDate) ? $birthDate : '' ?>" />
+                                <p class="text-danger"><?= isset($formError['birthDate']) ? $formError['birthDate'] : ''; ?></p>
                             </div>
 
                             <!-- mail -->

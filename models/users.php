@@ -7,7 +7,7 @@ class users extends database {
     public $password = '';
     public $lastname = '';
     public $firstname = '';
-    public $birthdate = '';
+    public $birthDate = '';
     public $email = '';
     public $phoneNumber = '';
     public $address = '';
@@ -43,12 +43,12 @@ class users extends database {
      * @return boolean
      */
     public function userRegister() {
-        $query = 'INSERT INTO `iNZ25_users` (`lastname`, `firstname`, `birthdate`, `email`, `password`, `login`, `phoneNumber`, `address`, `idCity`, `idUsersTypes`) '
-                . 'VALUES (:lastname, :firstname, :birthdate, :email, :password, :login, :phoneNumber, :address, :city, 1)';
+        $query = 'INSERT INTO `iNZ25_users` (`lastname`, `firstname`, `birthDate`, `email`, `password`, `login`, `phoneNumber`, `address`, `idCity`, `idUsersTypes`) '
+                . 'VALUES (:lastname, :firstname, :birthDate, :email, :password, :login, :phoneNumber, :address, :city, 1)';
         $result = $this->db->prepare($query);
         $result->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
         $result->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
-        $result->bindValue(':birthdate', $this->birthdate, PDO::PARAM_STR);
+        $result->bindValue(':birthDate', $this->birthDate, PDO::PARAM_STR);
         $result->bindValue(':email', $this->email, PDO::PARAM_STR);
         $result->bindValue(':address', $this->address, PDO::PARAM_STR);
         $result->bindValue(':phoneNumber', $this->phoneNumber, PDO::PARAM_STR);
@@ -72,10 +72,11 @@ class users extends database {
     }
 
     public function getProfilUserById() {
-        $PDOResult = $this->db->prepare('SELECT *'
+        $PDOResult = $this->db->prepare('SELECT iNZ25_users.`id`, `iNZ25_users`.`lastname`, `iNZ25_users`.`firstname`, `iNZ25_users`.`birthDate`, `iNZ25_users`.`phoneNumber`, `iNZ25_users`.`email`, `iNZ25_users`.`address`, `iNZ25_city`.`cityName`, `iNZ25_city`.`zipCode` '
                 . 'FROM `iNZ25_users` '
-                //. 'INNER JOIN `iNZ25_city`'
-                . 'WHERE `id` = :id') ; // :id marqueur nominatif car id est une inconnue
+                . 'INNER JOIN `iNZ25_city` '
+                . 'ON `iNZ25_users`.`idCity` = `iNZ25_city`.`id` '
+                . 'WHERE iNZ25_users.`id` = :id') ; // :id marqueur nominatif car id est une inconnue
         // bindvalue Associe une valeur à un paramètre (marqueur nominatif), this se réfère à tous les attributs de la classe
         $PDOResult->bindvalue(':id', $this->id, PDO::PARAM_INT);
         /** On execute la requête
@@ -91,13 +92,15 @@ class users extends database {
     }
 
     public function updateUserProfil() {
-        //modification du profil de l'utilisateur
-        $query = 'UPDATE `iNZ25_users` SET `lastname` = :lastname, `firstname` = :firstname, `birthdate` = :birthdate, `phone` = :phoneNumber, `email` = :email `password = :password`, `login = :login`, `address = :address`, `idCity = :city`,'
+        //méthode permettant la modification du profil de l'utilisateur
+        $query = 'UPDATE `iNZ25_users` SET `lastname` = :lastname, `firstname` = :firstname, `birthdate` = :birthDate, `phone` = :phoneNumber, `email` = :email `password = :password`, `login = :login`, `address = :address`, `idCity = :city` `idUsersTypes = 1`,'
+                . 'INNER JOIN `iNZ25_city` '
+                . 'ON `iNZ25_users`.`idCity` = `iNZ25_city`.`id` '
                 . 'WHERE `id` = :id';
         $modifyUser = $this->db->prepare($query);
         $modifyUser->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
         $modifyUser->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
-        $modifyUser->bindValue(':birthdate', $this->birthdate, PDO::PARAM_STR);
+        $modifyUser->bindValue(':birthdate', $this->birthDate, PDO::PARAM_STR);
         $modifyUser->bindValue(':phoneNumber', $this->phone, PDO::PARAM_STR);
         $modifyUser->bindValue(':address', $this->address, PDO::PARAM_STR);
         $modifyUser->bindValue(':city', $this->idCity, PDO::PARAM_INT);

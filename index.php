@@ -17,7 +17,7 @@ include 'header.php';
             <img class="d-block w-100" src="assets/img/Bien-être.jpg"  height="950" alt="deux personnes faisant de la relaxation" title="relaxation" />
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/sport-2266184__340.jpg"  height="950" alt="joggeur entrain de courir" />
+            <img class="d-block w-100" src="assets/img/sport-2266184__340.jpg"  height="950" alt="joggeur entrain de courir" title="running"/>
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -93,7 +93,7 @@ include 'header.php';
 <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
 <div class="select">
     <div class="row">                       
-        <div class="col-md-1">
+        <div class="col-md-2">
   <label for="cours" id="cours">Cours/Sports</label>
   <select name="cours" id="cours" class="form">
             <option selected disabled>Veuillez selectionnez un sport</option>
@@ -108,7 +108,7 @@ include 'header.php';
         </select>
     </div>
         
-          <div class="col-md-1">
+          <div class="col-md-2">
   <label for="cours" id="lieux">Lieux</label>
   <select name="cours" id="lieux" class="form">
             <option selected disabled>Veuillez selectionnez un lieux</option>
@@ -116,12 +116,12 @@ include 'header.php';
             <option value="2">Extérieur</option>
         </select>
     </div>
-        <div class="col-md-1">
+        <div class="col-md-2">
         <a href="#" role="" class="btn btn-indigo">Partagez</a>
     </div>
 </div>
 <?php
-//include 'offres.php';
+//include 'proposition.php';
 ?>
 </div>
 <?php

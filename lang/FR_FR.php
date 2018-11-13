@@ -5,7 +5,7 @@ define('FORM_PASSWORD','Veuillez entrer votre mot de passe');
 define('FORM_LOGIN_SUBMIT','Se connecter');
 define('LOGIN_TITLE','Connexion');
 //Formulaire d'inscription
-define('REGISTER_TITLE','Enregistrement d\'un utilisateur');
+define('REGISTER_TITLE','THE COACH');
 define('REGISTER_LASTNAME','Nom :');
 define('REGISTER_FIRSTNAME','Prénom :');
 define('REGISTER_EMAIL','Adresse mail :');
