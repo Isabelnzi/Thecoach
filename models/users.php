@@ -93,21 +93,24 @@ class users extends database {
 
     public function updateUserProfil() {
         //méthode permettant la modification du profil de l'utilisateur
-        $query = 'UPDATE `iNZ25_users` SET `lastname` = :lastname, `firstname` = :firstname, `birthdate` = :birthDate, `phone` = :phoneNumber, `email` = :email `password = :password`, `login = :login`, `address = :address`, `idCity = :city` `idUsersTypes = 1`,'
-                . 'INNER JOIN `iNZ25_city` '
-                . 'ON `iNZ25_users`.`idCity` = `iNZ25_city`.`id` '
-                . 'WHERE `id` = :id';
+        
+        $query = 'UPDATE `iNZ25_users` SET (`lastname` = :lastname, `firstname` = :firstname, `birthDate` = :birthDate, `phoneNumber` = :phoneNumber, `email` = :email, `address` = :address,  `idCity` = :city, `idUsersTypes` = 1) '
+                . 'WHERE iNZ25_users.`id` = :id ';
         $modifyUser = $this->db->prepare($query);
+        $modifyUser->bindvalue(':id', $this->id, PDO::PARAM_INT);
         $modifyUser->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
         $modifyUser->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
-        $modifyUser->bindValue(':birthdate', $this->birthDate, PDO::PARAM_STR);
-        $modifyUser->bindValue(':phoneNumber', $this->phone, PDO::PARAM_STR);
+        $modifyUser->bindValue(':birthDate', $this->birthDate, PDO::PARAM_STR);
+        $modifyUser->bindValue(':phoneNumber', $this->phoneNumber, PDO::PARAM_STR);
         $modifyUser->bindValue(':address', $this->address, PDO::PARAM_STR);
         $modifyUser->bindValue(':city', $this->idCity, PDO::PARAM_INT);
-        $modifyUser->bindValue(':email', $this->mail, PDO::PARAM_STR);
-        $modifyUser->bindValue(':password', $this->mail, PDO::PARAM_STR);
-        $modifyUser->bindValue(':login', $this->mail, PDO::PARAM_STR);
-        $modifyUser->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $modifyUser->bindValue(':email', $this->email, PDO::PARAM_STR);
         return $modifyUser->execute();
     }
+    public function deleteUser() {
+        $remove = $this->db->prepare('DELETE FROM `iNZ25_users` WHERE `id` =  :idUser ');
+        $remove->bindValue(':idUser', $this->id, PDO::PARAM_INT);
+        return $remove->execute();
 }
+
+    }

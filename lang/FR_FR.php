@@ -30,6 +30,7 @@ define('ERROR_PHONENUMBER','Numéro de téléphone :');
 define('ERROR_LOGIN','Erreur dans la saisie de l\'identifiant');
 define('USER_CONNECTION_SUCCESS','Connecté avec succès');
 define('USER_CONNECTION_ERROR','Erreur lors de la connexion');
+define('ERROR_SUBMIT','Erreur lors de la modification');
 //Menu
 define('NAV_WELCOME','Bienvenue %s');
 define('NAV_CONNECT','Connexion');

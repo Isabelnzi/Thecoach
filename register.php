@@ -6,14 +6,7 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
     ?> 
     <div class="alert" id="Userregister">
         <h1>Votre inscription a bien été prise en compte !</h1>
-        <p><?= $_POST['lastname'] ?></p>
-        <p><?= $_POST['firstname'] ?></p>
-        <p><?= $_POST['birthDate'] ?></p>
-        <p><?= $_POST['email'] ?></p>
-        <p><?= $_POST['phoneNumber'] ?></p>
-        <p><?= $_POST['address'] ?></p>
-        <p><?= $_POST['city'] ?></p>
-        <p><?= $_POST['zipCode'] ?></p>       
+      
     </div>
 <?php } else { ?>
     <form class="text-center border  p-2" action="register.php" method="POST">

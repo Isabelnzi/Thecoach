@@ -88,13 +88,19 @@ if (isset($_POST['submit'])) {
         $formError['email'] = 'Votre email est invalide';
     }
 
-    if (count($formError) == 0) {
-        // Récupération de la valeur de l'id dans le paramètre de l'url
-            $modifyUser->id = $_GET['id'];
-        if (!$modifyUser->updateUserProfil()) {
-            $formError['submitModify'] = 'Il y a eu un problème';
         }
-    }
-}
+        
+//if (count($formError) == 0){
+        // Récupération de la valeur de l'id dans le paramètre de l'url
+        $profil->id = $_GET['id'];
+       if ($profil->updateUserProfil()){
+           $formSuccess = 'Le profil a été modifié';
+       }
+        if (!$profil->updateUserProfil()){
+            $formError['updateButton'] = ERROR_SUBMIT;
+        }
+    //}
+
+
 // On place le select à la fin du code pour que l'affichage soit instantanée
 $profilUser = $profil->getProfilUserById();
