@@ -94,8 +94,8 @@ include 'header.php';
 <div class="select">
     <div class="row">                       
         <div class="col-md-2">
-  <label for="cours" id="cours">Cours/Sports</label>
-  <select name="cours" id="cours" class="form">
+  <label for="cours" id="Sports">Sports</label>
+  <select name="cours" id="Sports" class="form">
             <option selected disabled>Veuillez selectionnez un sport</option>
             <option value="1">Fitness</option>
             <option value="2">Musculation</option>
@@ -106,10 +106,8 @@ include 'header.php';
             <option value="7">Cardio</option>
             <option value="8">Course à pieds</option>
         </select>
-    </div>
-        
-          <div class="col-md-2">
-  <label for="cours" id="lieux">Lieux</label>
+    
+  <label for="cours" id="location">lieux</label>
   <select name="cours" id="lieux" class="form">
             <option selected disabled>Veuillez selectionnez un lieux</option>
             <option value="1">Intérieur</option>
@@ -117,11 +115,11 @@ include 'header.php';
         </select>
     </div>
         <div class="col-md-2">
-        <a href="#" role="" class="btn btn-indigo">Partagez</a>
+      
     </div>
 </div>
 <?php
-//include 'proposition.php';
+include 'proposition.php';
 ?>
 </div>
 <?php

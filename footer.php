@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer id="footer" class="page-footer font-large blue-grey lighten-5 ">
+<footer id="footer" class="page-footer font-large blue-grey lighten-5">
 
     <div style="background-color: #FF8800">
         <div class="container">
@@ -92,9 +92,6 @@
                 <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="dark-grey-text" href="#!">Mon compte</a>
-                </p>
-                <p>
                     <a class="dark-grey-text" href="http://thecoach/inscription.php">Inscription</a>
                 </p>
                 <p>
@@ -113,14 +110,8 @@
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> info@example.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+
+                <p><a class="dark-grey-text" href="contact.php"><i class="fa fa-envelope mr-3"></i> Nous contacter</a></p>
 
             </div>
             <!-- Grid column -->
@@ -129,18 +120,19 @@
         <!-- Grid row -->
 
     </div>
-    <!-- Footer Links -->
 
+    <!-- Copyright -->
     <div class="footer-copyright text-center text-white-50 py-1 bg-warning">© 2018 Copyright:
         <a class="dark-white-text" href="#"> ISABEL NZINGANI</a>
     </div>
-    <!-- Copyright -->
-
-
-    <!-- Footer -->
-
+   
+    <!-- Footer Links -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/js/mdb.min.js"></script> 
     <script src="assets/js/script.js"></script>
+
+</footer>
+</body>
+</html>

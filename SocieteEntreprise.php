@@ -15,7 +15,7 @@ include 'header.php';
     </div>
 </div>
 
- 
+ <!--création d'un formulaire de prise de rendez-vous-->
     <h2 class="text-center">Prise de rendez-vous</h2>
 <div class="row justify-content-center m-5">
     <form class="col-md-10" action="#" method="POST">
@@ -77,12 +77,10 @@ include 'header.php';
     </form>
     <div class="col-md-6">
     <p>Votre voulez en savoir plus sur The Coach. Prenez donc rendez-vous pour nous exposer votre projet, vos besoins et vos envies. Nous sommes à votre disposition pour répondre à vos questions.
-Vous ne vous occupez de rien : le matériel est inclus. The Coach saura vous trouver le bon coach. Pour plus d’informations nous contactez .
+Vous ne vous occupez de rien : le matériel est inclus. The Coach saura vous trouver le bon coach. Pour plus d’informations. <a class="dark-grey-text" href="contact.php"><i class="fa fa-envelope mr-3"></i> Nous contacter</p></a>.
 </p>
 </div>
 
     <?php
     include 'footer.php';
     ?>
-    <div>
-        s

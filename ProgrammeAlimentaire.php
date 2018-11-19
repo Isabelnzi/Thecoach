@@ -47,5 +47,4 @@ Vous l'avez compris, le rééquilibrage alimentaire n'implique pas seulement de 
     <?php
     include 'footer.php';
     ?>
-    <div>
-
+    

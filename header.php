@@ -26,14 +26,12 @@ include 'controllers/headerCtrl.php';
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-
                     <li class="nav-item">
                         <a class="nav-link" href="http://thecoach/DevenirCoach.php">Devenir Coach</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Programmes
-                        </a>
+                            Programmes</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="http://thecoach/ProgrammeSportifs.php">Sportifs</a>
                             <a class="dropdown-item" href="http://thecoach/ProgrammeAlimentaire.php">Alimentaire</a>
@@ -42,8 +40,7 @@ include 'controllers/headerCtrl.php';
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"></a>
                         </div>
-                    </li>
-
+                    </li> 
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
@@ -57,10 +54,12 @@ include 'controllers/headerCtrl.php';
                                     <a class="dropdown-item" href="http://thecoach/profile.php?id=<?= $_SESSION['id'] ?>"><?= NAV_PROFILE ?></a>
                                     <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?action=disconnect"><?= NAV_DISCONNECT ?></a>
                                 </div>
-                            <?php }
-                            ?>
-                        </li>  
-                        <a class="btn btn-indigo" href="http://thecoach/register.php" role="button" id="submit">Inscription</a>
+                    <?php }
+                    ?>
+                    </ul>
                 </form>
+                <div>
+                <a class="btn btn-indigo" href="http://thecoach/register.php" role="button" id="submit">Inscription</a>
+            </div>
             </div>
         </nav> 

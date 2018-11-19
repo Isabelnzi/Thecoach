@@ -1,12 +1,19 @@
 <?php
+
 //appel de l 'ajax
 if (isset($_POST['zipCodeSearch'])) {
     include '../configuration.php';
     $city = new city();
     $city->zipcode = $_POST['zipCodeSearch'];
     echo json_encode($city->getCityByZipCode());
+} elseif (isset($_POST['loginVerify'])) {
+    include '../configuration.php';
+    $user = new users();
+    $user->login = htmlspecialchars($_POST['loginVerify']);
+    echo $user->checkIfUserExist();
 } else {
-    
+
+
     include 'configuration.php';
     //déclaration de mes regex
     $regexphoneNumber = '/^[0][1-9][0-9]{8}$/';
@@ -16,7 +23,7 @@ if (isset($_POST['zipCodeSearch'])) {
     $regexMail = '/^[A-z0-9._%+-]+[\@]{1}[A-z0-9.-]+[\.]{1}[A-z]{2,4}$/';
     $regexAddress = '/^[0-9-a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\- ]+$/';
     $regexNumber = '/^[0-9-a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\- ]+$/';
-    $formError = array();//tableau d'erreur
+    $formError = array(); //tableau d'erreur
 //condition pour le formulaire
     if (isset($_POST['register'])) {
         if (!empty($_POST['lastname'])) {
@@ -102,17 +109,12 @@ if (isset($_POST['zipCodeSearch'])) {
             $formError['civility'] = 'Veuillez indiquer votre civilité';
         }
         if (!empty($_POST['login'])) {
-            if (preg_match($regexName, $_POST['login'])) {
-                $login = htmlspecialchars($_POST['login']);
-            } else {
-                $formError['login'] = 'La saisie de votre Civilité est invalide';
-            }
+            $login = htmlspecialchars($_POST['login']);
         } else {
-            $formError['login'] = 'Veuillez indiquer votre civilité';
+            $formError['login'] = 'erreur didentifiant';
         }
-
         if (!empty($_POST['password']) && !empty($_POST['passwordVerify']) && $_POST['password'] == $_POST['passwordVerify']) {
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);//password_hash permet le hashage du mot de passe dans la base de donn"ée
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //password_hash permet le hashage du mot de passe dans la base de donn"ée
             //si les champs sont vides ou s'il ne sont pas identiques affichage d'un message d'erreur
         } else {
             $formError['password'] = 'Veuillez vérifier votre mot de passe';
@@ -126,11 +128,11 @@ if (isset($_POST['zipCodeSearch'])) {
             $user->phoneNumber = $phoneNumber;
             $user->email = $email;
             $user->password = $password;
-            $user->login = $login;
+            $user->login = $loginRegister;
             $user->address = $address;
             $user->idCity = $city;
             $user->userRegister();
-            }
+        }
     }
 }   
 

@@ -20,7 +20,8 @@ class city extends database {
     public function getCityByZipCode() {
         $queryResult = array();
         $query = 'SELECT `id`, `cityName`, `zipCode` FROM `iNZ25_city` '
-                . 'WHERE `zipCode` LIKE :zipCode';
+                . 'WHERE `zipCode` LIKE :zipCode '
+                . 'ORDER BY `cityName` ASC';
         $result = $this->db->prepare($query);
         $result->bindValue(':zipCode', $this->zipcode . '%', PDO::PARAM_STR);
         if ($result->execute()) {
