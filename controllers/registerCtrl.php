@@ -113,11 +113,22 @@ if (isset($_POST['zipCodeSearch'])) {
         } else {
             $formError['login'] = 'erreur didentifiant';
         }
+
         if (!empty($_POST['password']) && !empty($_POST['passwordVerify']) && $_POST['password'] == $_POST['passwordVerify']) {
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //password_hash permet le hashage du mot de passe dans la base de donn"ée
             //si les champs sont vides ou s'il ne sont pas identiques affichage d'un message d'erreur
         } else {
             $formError['password'] = 'Veuillez vérifier votre mot de passe';
+        }
+        if (!empty($_POST['usersTypes'])) {
+            //regex number car on récupére l'id de la ville
+            if (preg_match($regexNumber, $_POST['usersTypes'])) {
+                $idUsersTypes = htmlspecialchars($_POST['usersTypes']);
+            } else {
+                $formError['usersTypes'] = 'La saisie de votre ville est invalide';
+            }
+        } else {
+            $formError['usersTypes'] = 'Veuillez indiquer votre ville';
         }
 
         if (isset($_POST['register']) && count($formError) == 0) {
@@ -128,13 +139,13 @@ if (isset($_POST['zipCodeSearch'])) {
             $user->phoneNumber = $phoneNumber;
             $user->email = $email;
             $user->password = $password;
-            $user->login = $loginRegister;
+            $user->login = $login;
             $user->address = $address;
             $user->idCity = $city;
+            $user->idUsersTypes = $idUsersTypes;
             $user->userRegister();
         }
     }
-}   
-
+}
     
     

@@ -7,6 +7,20 @@ include 'controllers/userCtrl.php';
 
 <div class="container profile">
     <form action="#" method="POST">
+    <div class="md-form">
+        <label for="password"><?= REGISTER_PASSWORD ?></label>
+        <input type="password" name="password" id="password"/>
+        <p class="text-danger"><?= isset($formError['password']) ? $formError['password'] : ''; ?></p>
+    </div>
+    <!-- Mot de passe verification-->
+    <div class="md-form">
+        <label for="passwordVerify"><?= REGISTER_PASSWORD_VERIFY ?></label>
+        <input type="password" name="passwordVerify" id="passwordVerify"/>
+        <p class="text-danger"><?= isset($formError['password']) ? $formError['password'] : ''; ?></p> 
+    </div>
+    <input type="submit" name="updatePass" id="updatePass" value="MODIFIER" />
+</form> 
+    <form action="#" method="POST">
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="profile-img ">
@@ -65,7 +79,7 @@ include 'controllers/userCtrl.php';
                             <option selected disabled>Choisir une ville</option>
                             <?php foreach ($cityName as $cityValue) { ?>
                                 <option value="<?= $cityValue->cityValue . id ?>"></option>
-                            <?php }  ?>
+                            <?php } ?>
                         </select>
                         <p class="text-danger"><?= isset($formError['city']) ? $formError['city'] : ''; ?></p>
 
@@ -90,12 +104,13 @@ include 'controllers/userCtrl.php';
                         </div>
                     </div>
                 </div>
-            <div>
-    <p class="text-danger"><?= isset($formError['updateButton']) ? $formError['updateButton'] : '' ?></p>
-            </div>  
+                <div>
+                    <p class="text-danger"><?= isset($formError['updateButton']) ? $formError['updateButton'] : '' ?></p>
+                </div>  
             </div>
-
-            
+        </div>
+</div>
+    
 <?php
 include 'footer.php';
 ?>

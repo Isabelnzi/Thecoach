@@ -17,8 +17,17 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
                                 <strong>S'inscrire</strong>
                             </h5>
                             <!--Card content-->
-                            <div class="card-body px-lg-2 pt-0">
-                                <!-- civility -->
+                            <div class="card-body px-lg-2 pt-0 center">
+                                <div class="row">
+                                  
+                                <!--userTypes et civility -->
+                                <p>
+                                    <select name="usersTypes">
+                                        <option selected disabled="Veuillez choisir">Utilisateurs</option>
+                                        <option name="usersTypes" value="1">Clients</option>
+                                        <option name="usersTypes" value="2">Coach</option>
+                                    </select>
+                                </p>
                                 <p>
                                     <select name="civility">
                                         <option selected disabled="Veuillez choisir une civilité">Civilité</option>
@@ -26,7 +35,10 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
                                         <option>Mme</option>
                                     </select>
                                 </p>
+                                 
                             </div>
+                            </div>
+                            
                             <div class="col">
                                 <!-- Last name  firstname-->
                                 <div class="md-form">
@@ -84,7 +96,7 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
                                 <!-- identifiant -->
                                 <div class="md-form">
                                     <label for="login"><?= REGISTER_LOGIN ?></label>
-                                    <input type="text" name="loginRegister" id="login"/>
+                                    <input type="text" name="login" id="login"/>
                                     <p class="text-danger"><?= isset($formError['login']) ? $formError['login'] : ''; ?></p>
                                 </div>
                                 <!-- Mot de passe-->

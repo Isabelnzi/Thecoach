@@ -9,9 +9,9 @@ if (isset($_POST['zipCodeSearch'])) {
     $city->zipcode = $_POST['zipCodeSearch'];
     echo json_encode($city->getCityByZipCode());
 } else {
-/**
- * On instancie l'objet profil
- */
+    /**
+     * On instancie l'objet profil
+     */
     $profil = new users();
     if (isset($_GET['idUser'])) {
         $profil->id = $_GET['idUser'];
@@ -107,6 +107,25 @@ if (isset($_POST['zipCodeSearch'])) {
             }
         } else {
             $formError['updateButton'] = ERROR_SUBMIT;
+        }
+    }
+    if (isset($_POST['updatePass'])) {
+        if (!empty($_POST['password']) && !empty($_POST['passwordVerify']) && $_POST['password'] == $_POST['passwordVerify']) {
+            
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //password_hash permet le hashage du mot de passe dans la base de donn"ée
+            //si les champs sont vides ou s'il ne sont pas identiques affichage d'un message d'erreur
+        } else {
+            $formError['password'] = 'Veuillez vérifier votre mot de passe';
+        }
+        if (count($formError) == 0) {
+            // Récupération de la valeur de l'id dans le paramètre de l'url
+            $profil->id = $_GET['id'];
+             $profil->password = $password;
+            if ($profil->updatePassword()) {
+                $formResult['result'] = true;
+            }
+        } else {
+            $formError['updatePass'] = ERROR_SUBMIT;
         }
     }
 }

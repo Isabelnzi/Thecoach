@@ -92,13 +92,13 @@
                 <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/inscription.php">Inscription</a>
+                    <a class="dark-grey-text" href="http://thecoach/register.php">Inscription</a>
                 </p>
                 <p>
                     <a class="dark-grey-text" href="http://thecoach/DevenirCoach.php">Devenir Coach</a>
                 </p>
                 <p>
-                    <a class="dark-grey-text" href="#!">Politique de cinfidentialité</a>
+                    <a class="dark-grey-text" href="http://thecoach/politique.php">Politique de cinfidentialité</a>
                 </p>
 
             </div>
@@ -112,7 +112,7 @@
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 
                 <p><a class="dark-grey-text" href="contact.php"><i class="fa fa-envelope mr-3"></i> Nous contacter</a></p>
-
+                <button onclick="topFunction()" id="myBtn" title="Remonter" ><img src="assets/img/gym-shoes.png" alt=""title=""/></button>
             </div>
             <!-- Grid column -->
 

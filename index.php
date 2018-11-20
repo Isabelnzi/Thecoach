@@ -91,29 +91,7 @@ include 'header.php';
 <h1>Partagez vos Activités</h1>
 <div class="partagez">
 <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
-<div class="select">
-    <div class="row">                       
-        <div class="col-md-2">
-  <label for="cours" id="Sports">Sports</label>
-  <select name="cours" id="Sports" class="form">
-            <option selected disabled>Veuillez selectionnez un sport</option>
-            <option value="1">Fitness</option>
-            <option value="2">Musculation</option>
-            <option value="3">Boxe</option>
-            <option value="4">Relaxation</option>
-            <option value="5">Pertes de poids</option>
-            <option value="6">Zumba</option>
-            <option value="7">Cardio</option>
-            <option value="8">Course à pieds</option>
-        </select>
-    
-  <label for="cours" id="location">lieux</label>
-  <select name="cours" id="lieux" class="form">
-            <option selected disabled>Veuillez selectionnez un lieux</option>
-            <option value="1">Intérieur</option>
-            <option value="2">Extérieur</option>
-        </select>
-    </div>
+
         <div class="col-md-2">
       
     </div>

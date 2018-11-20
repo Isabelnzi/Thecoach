@@ -45,7 +45,7 @@ class users extends database {
      */
     public function userRegister() {
         $query = 'INSERT INTO `iNZ25_users` (`lastname`, `firstname`, `birthDate`, `email`, `password`, `login`, `phoneNumber`, `address`, `idCity`, `idUsersTypes`) '
-                . 'VALUES (:lastname, :firstname, :birthDate, :email, :password, :login, :phoneNumber, :address, :city, 1)';
+                . 'VALUES (:lastname, :firstname, :birthDate, :email, :password, :login, :phoneNumber, :address, :city, :usersTypes)';
         $result = $this->db->prepare($query);
         $result->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
         $result->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
@@ -54,6 +54,7 @@ class users extends database {
         $result->bindValue(':address', $this->address, PDO::PARAM_STR);
         $result->bindValue(':phoneNumber', $this->phoneNumber, PDO::PARAM_STR);
         $result->bindValue(':city', $this->idCity, PDO::PARAM_INT);
+        $result->bindValue(':usersTypes', $this->idUsersTypes, PDO::PARAM_INT);
         $result->bindValue(':password', $this->password, PDO::PARAM_STR);
         $result->bindValue(':login', $this->login, PDO::PARAM_STR);
 
@@ -104,6 +105,15 @@ class users extends database {
         $modifyUser->bindValue(':address', $this->address, PDO::PARAM_STR);
         $modifyUser->bindValue(':city', $this->idCity, PDO::PARAM_INT);
         $modifyUser->bindValue(':email', $this->email, PDO::PARAM_STR);
+        return $modifyUser->execute();
+    }
+    public function updatePassword() {
+        //méthode permettant la modification du profil de l'utilisateur
+
+        $query = 'UPDATE `iNZ25_users` SET `password` = :password WHERE `id` = :id';
+        $modifyUser = $this->db->prepare($query);
+        $modifyUser->bindvalue(':id', $this->id, PDO::PARAM_INT);
+        $modifyUser->bindValue(':password', $this->password, PDO::PARAM_STR);
         return $modifyUser->execute();
     }
 
