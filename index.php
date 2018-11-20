@@ -91,19 +91,13 @@ include 'header.php';
 <h1>Partagez vos Activités</h1>
 <div class="partagez">
 <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
-
-        <div class="col-md-2">
-      
-    </div>
 </div>
 <?php
 include 'proposition.php';
 ?>
-</div>
 <?php
 //on y retrouve le footer
 include 'footer.php';
 ?>
-<div>
 
 

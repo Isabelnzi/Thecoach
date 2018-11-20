@@ -11,12 +11,14 @@ define('REGISTER_FIRSTNAME','Prénom :');
 define('REGISTER_EMAIL','Adresse mail :');
 define('REGISTER_PHONENUMBER','Numéro de téléphone :');
 define('REGISTER_BIRTHDATE','Date de naissance:');
-define('REGISTER_CITY','Ville:');
+define('REGISTER_CITY','');
 define('REGISTER_ZIPCODE','Code postal:');
 define('REGISTER_ADDRESS','Adresse :');
 define('REGISTER_LOGIN','Identifiant :');
 define('REGISTER_PASSWORD','Mot de passe :');
 define('REGISTER_PASSWORD_VERIFY','Mot de passe (vérification) :');
+define('REGISTER_NEWPASSWORD','Nouveau mot de passe :');
+define('REGISTER_NEWPASSWORD_VERIFY','Nouveau mot de passe (vérification) :');
 define('REGISTER_SUBMIT','Enregistrer');
 //Erreur
 define('ERROR_LASTNAME','Erreur dans la saisie du nom');

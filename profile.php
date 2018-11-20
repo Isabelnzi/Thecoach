@@ -7,35 +7,14 @@ include 'controllers/userCtrl.php';
 
 <div class="container profile">
     <form action="#" method="POST">
-    <div class="md-form">
-        <label for="password"><?= REGISTER_PASSWORD ?></label>
-        <input type="password" name="password" id="password"/>
-        <p class="text-danger"><?= isset($formError['password']) ? $formError['password'] : ''; ?></p>
-    </div>
-    <!-- Mot de passe verification-->
-    <div class="md-form">
-        <label for="passwordVerify"><?= REGISTER_PASSWORD_VERIFY ?></label>
-        <input type="password" name="passwordVerify" id="passwordVerify"/>
-        <p class="text-danger"><?= isset($formError['password']) ? $formError['password'] : ''; ?></p> 
-    </div>
-    <input type="submit" name="updatePass" id="updatePass" value="MODIFIER" />
-</form> 
-    <form action="#" method="POST">
+        
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="profile-img ">
-                    <img src="assets/img/fitness-1348867__340.jpg" alt="joggeur" height="200" width="200" title="joggeur"/>
-                    <div class="file btn btn-lg btn-primary">
-                        Change Photo
-                        <input type="file" name="file" placeholder="Fichier" id="fichier"/>
-                    </div>
-                </div>
-            </div>
+          
             <div class="col-md-8">
                 <div class="profile-head">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mon compte</a>
                         </li>
                     </ul>
                 </div>
@@ -107,6 +86,20 @@ include 'controllers/userCtrl.php';
                 <div>
                     <p class="text-danger"><?= isset($formError['updateButton']) ? $formError['updateButton'] : '' ?></p>
                 </div>  
+    <form action="#" method="POST">
+    <div class="md-form">
+        <label for="password"><?= REGISTER_PASSWORD ?></label>
+        <input type="password" name="password" id="password"/>
+        <p class="text-danger"><?= isset($formError['password']) ? $formError['password'] : ''; ?></p>
+    </div>
+    <!-- Mot de passe verification-->
+    <div class="md-form">
+        <label for="passwordVerify"><?= REGISTER_PASSWORD_VERIFY ?></label>
+        <input type="password" name="passwordVerify" id="passwordVerify"/>
+        <p class="text-danger"><?= isset($formError['password']) ? $formError['password'] : ''; ?></p> 
+    </div>
+    <input type="submit" name="updatePass" id="updatePass" value="MODIFIER" />
+</form> 
             </div>
         </div>
 </div>

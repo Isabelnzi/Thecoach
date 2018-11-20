@@ -51,7 +51,6 @@ include 'controllers/propositionCtrl.php'
             <input type="submit" name="go" value="Rejoins moi">           
         </div>
     </div>
-</div>
 </form>
 
 
