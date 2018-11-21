@@ -1,3 +1,4 @@
+//Ajax qui permet de récupérer le code postal et la ville
 $(function () {
     $("#zipCode").keyup(function () {
         //on lance la recherche à partir de trois chiffres entrer dans l'input.
@@ -16,8 +17,9 @@ $(function () {
 });
 
 
-
+// Ajax pour verifier si l'utilisateur existe 
 $(function () {
+    //l'événement blur = perte de focus
     $('#login').blur(function () {
         $.post('controllers/registerCtrl.php', { loginVerify:$(this).val() } , function (data) {
             if(data == 1){
@@ -31,7 +33,7 @@ $(function () {
         'JSON');
     });
 });
-
+// fonction pour le bouton qui permet de remonter en haut de page
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

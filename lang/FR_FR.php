@@ -11,6 +11,9 @@ define('REGISTER_FIRSTNAME','Prénom :');
 define('REGISTER_EMAIL','Adresse mail :');
 define('REGISTER_PHONENUMBER','Numéro de téléphone :');
 define('REGISTER_BIRTHDATE','Date de naissance:');
+define('REGISTER_DATE','');
+define('REGISTER_HOUR','');
+define('REGISTER_PROPOSITION','Activité:');
 define('REGISTER_CITY','');
 define('REGISTER_ZIPCODE','Code postal:');
 define('REGISTER_ADDRESS','Adresse :');
@@ -20,6 +23,7 @@ define('REGISTER_PASSWORD_VERIFY','Mot de passe (vérification) :');
 define('REGISTER_NEWPASSWORD','Nouveau mot de passe :');
 define('REGISTER_NEWPASSWORD_VERIFY','Nouveau mot de passe (vérification) :');
 define('REGISTER_SUBMIT','Enregistrer');
+define('REGISTER_ENJOY','Rejoins nous');
 //Erreur
 define('ERROR_LASTNAME','Erreur dans la saisie du nom');
 define('ERROR_FIRSTNAME','Erreur dans la saisie du prénom');

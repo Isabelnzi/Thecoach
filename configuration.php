@@ -10,6 +10,7 @@ include_once 'class/database.php';
 include_once 'models/users.php';
 include_once 'models/usersTypes.php';
 include_once 'models/city.php';
+include_once 'models/propositions.php';
 
 
 
