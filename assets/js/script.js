@@ -16,7 +16,6 @@ $(function () {
     });
 });
 
-
 // Ajax pour verifier si l'utilisateur existe 
 $(function () {
     //l'événement blur = perte de focus

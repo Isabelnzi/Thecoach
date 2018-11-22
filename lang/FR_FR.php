@@ -40,7 +40,8 @@ define('ERROR_SUBMIT','Erreur lors de la modification');
 //Menu
 define('NAV_WELCOME','Bienvenue %s');
 define('NAV_CONNECT','Connexion');
-define('NAV_PROFILE','profil');
+define('NAV_PROFILE','Mon compte');
+define('NAV_EVENT','Proposition activité');
 define('NAV_DISCONNECT','Déconnexion');
 define('NAV_LANGUAGE','Choix de la langue');
 define('NAV_FRENCH','Français');

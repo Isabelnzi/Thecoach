@@ -28,7 +28,7 @@ if (isset($_POST['zipCodeSearch'])) {
     if (isset($_POST['register'])) {
         if (!empty($_POST['lastname'])) {
             if (preg_match($regexName, $_POST['lastname'])) {
-                $lastname = htmlspecialchars($_POST['lastname']);
+                $lastname = htmlspecialchars(ucfirst(trim($_POST['lastname'])));
             } else {
                 $formError['lastname'] = 'La saisie de votre nom est invalide';
             }
@@ -38,7 +38,7 @@ if (isset($_POST['zipCodeSearch'])) {
 
         if (!empty($_POST['firstname'])) {
             if (preg_match($regexName, $_POST['firstname'])) {
-                $firstname = htmlspecialchars($_POST['firstname']);
+                $firstname = htmlspecialchars(ucfirst(trim($_POST['firstname'])));
             } else {
                 $formError['firstname'] = 'La saisie de votre prénom est invalide';
             }
@@ -95,7 +95,7 @@ if (isset($_POST['zipCodeSearch'])) {
         }
 
         if (!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $email = htmlspecialchars($_POST['email']);
+            $email = htmlspecialchars(strtolower(trim($_POST['email'])));
         } else {
             $formError['email'] = 'Votre email est invalide';
         }
@@ -109,7 +109,7 @@ if (isset($_POST['zipCodeSearch'])) {
             $formError['civility'] = 'Veuillez indiquer votre civilité';
         }
         if (!empty($_POST['login'])) {
-            $login = htmlspecialchars($_POST['login']);
+            $login = htmlspecialchars(trim($_POST['login']));
         } else {
             $formError['login'] = 'erreur didentifiant';
         }

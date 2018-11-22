@@ -123,20 +123,5 @@ class users extends database {
         return $remove->execute();
     }
 
-  public function coachRegister() {
-        $query = 'INSERT INTO `iNZ25_users` (`lastname`, `firstname`, `birthDate`, `email`, `password`, `login`, `phoneNumber`, `address`, `idCity`, `idUsersTypes`) '
-                . 'VALUES (:lastname, :firstname, :birthDate, :email, :password, :login, :phoneNumber, :address, :city, 2)';
-        $result = $this->db->prepare($query);
-        $result->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
-        $result->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
-        $result->bindValue(':birthDate', $this->birthDate, PDO::PARAM_STR);
-        $result->bindValue(':email', $this->email, PDO::PARAM_STR);
-        $result->bindValue(':address', $this->address, PDO::PARAM_STR);
-        $result->bindValue(':phoneNumber', $this->phoneNumber, PDO::PARAM_STR);
-        $result->bindValue(':city', $this->idCity, PDO::PARAM_INT);
-        $result->bindValue(':password', $this->password, PDO::PARAM_STR);
-        $result->bindValue(':login', $this->login, PDO::PARAM_STR);
 
-        return $result->execute();
-    }
 }

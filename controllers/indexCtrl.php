@@ -1,3 +1,4 @@
+
 <?php
 
 //appel de l 'ajax
@@ -7,7 +8,6 @@ if (isset($_POST['zipCodeSearch'])) {
     $city->zipcode = $_POST['zipCodeSearch'];
     echo json_encode($city->getCityByZipCode());
 } else {
-
     include 'configuration.php';
     $hour = '00:00';
     $date = '- - ';
@@ -24,11 +24,14 @@ if (isset($_POST['zipCodeSearch'])) {
 
     if (isset($_POST['go'])) {
 // on teste la déclaration de nos variables
-        if (!empty($_POST['sports'])) {
-            $sports = htmlspecialchars($_POST['sports']);
-        } else {
-            $formError['sports'] = 'Veuillez indiquer votre sport';
-        }
+         if (!empty($_POST['sports'])) {
+             if (preg_match($regexNumber, $_POST['sports'])) {
+                $sports = htmlspecialchars($_POST['sports']);
+            } else {
+                $formError['sports'] = 'Veuillez choisir un sport';
+            }
+         }
+
         if (!empty($_POST['address'])) {
             if (preg_match($regexAddress, $_POST['address'])) {
                 $address = htmlspecialchars($_POST['address']);
@@ -38,6 +41,7 @@ if (isset($_POST['zipCodeSearch'])) {
         } else {
             $formError['address'] = 'Veuillez indiquer votre adresse';
         }
+
         if (!empty($_POST['zipCode'])) {
             if (preg_match($regexzipCode, $_POST['zipCode'])) {
                 $zipCode = htmlspecialchars($_POST['zipCode']);
@@ -47,6 +51,7 @@ if (isset($_POST['zipCodeSearch'])) {
         } else {
             $formError['zipCode'] = 'Veuillez indiquer votre code postal';
         }
+
         if (!empty($_POST['city'])) {
             //regex number car on récupére l'id de la ville
             if (preg_match($regexNumber, $_POST['city'])) {
@@ -59,15 +64,14 @@ if (isset($_POST['zipCodeSearch'])) {
         }
 
         if (!empty($_POST['date'])) {
-            if (preg_match($regexDate, $_POST['date'])) {
-                $date = htmlspecialchars($_POST['date']);
-            } else {
-                $formError['date'] = 'la saisie de votre date est invalide';
-            }
+           $date = htmlspecialchars($_POST['date']);
+        } else {
+            $formError['date'] = 'la saisie de votre date est invalide';
         }
+
         if (!empty($_POST['hour'])) {
             if (preg_match($regexHour, $_POST['hour'])) {
-                $date = htmlspecialchars($_POST['hour']);
+                $hour = htmlspecialchars($_POST['hour']);
             } else {
                 $formError['hour'] = 'la saisie de l\'horaire est invalide';
             }
@@ -79,17 +83,27 @@ if (isset($_POST['zipCodeSearch'])) {
             //stocker dans le tableau le rapport d'erreur
             $formError['propositionName'] = 'Champ sujet obligatoire.';
         }
-    }
+   
+}
+if (isset($_POST['go']) && count($formError) == 0) {
+    $proposition = new propositions();
+    $proposition->dateHour = $date . ' ' . $hour;
+    $proposition->propositionName = $propositionName;
+    $proposition->idCity = $city;
+    $proposition->idSports = $sports;
+    $proposition->address = $address;
+    $proposition->getPropositionByIdUsers();
+}
+}
 
-    if (isset($_POST['go']) && count($formError) == 0) {
-        var_dump($_POST);
-        $proposition = new propositions();
-        $proposition->dateHour = $date . ' ' . $hour;
-        $proposition->propositionName = $propositionName;
-        $proposition->sports = $sports;
-        $proposition->idCity = $city;
-        $proposition->idSports= $sports;
-        $proposition->address = $address;
-        $proposition->getPropositionByIdUsers();
-    }
+$sport = new sports();
+$sportList = $sport->getSports();
+
+
+
+// condition pour afficher les informations de l'événement
+if (!empty($_SESSION['id'])) {
+    $proposition = new propositions();
+    $proposition->id = $_SESSION['id'];
+    $showPropositionUser= $proposition->showProposition();
 }
