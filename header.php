@@ -52,7 +52,7 @@ include 'controllers/headerCtrl.php';
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item" href="http://thecoach/profile.php?id=<?= $_SESSION['id'] ?>"><?= NAV_PROFILE ?></a>
-                                    <a class="dropdown-item" href="http://thecoach/index.php?id=<?= $_SESSION['id'] ?>"><?= NAV_EVENT?></a>
+                                    <a class="dropdown-item" href="http://thecoach/proposition.php?id=<?= $_SESSION['id'] ?>"><?= NAV_EVENT?></a>
                                     <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?action=disconnect"><?= NAV_DISCONNECT ?></a>
                                 </div>
                     <?php }
