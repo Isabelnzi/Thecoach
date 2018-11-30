@@ -115,7 +115,7 @@ include 'controllers/indexCtrl.php';
                                 <form  method="POST">
                                 <a class="btn btn-ambre" name="participe" href="accueil?idPropositions=<?= $show->id ?>" id="participe">Je Participe</a>
                                 <?php if(isset($_SESSION['isConnect'])){ ?>
-                                <a href="Mproposition" class="btn btn-primary" name="modify"  id="modify" value="modify" ><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a href="Mproposition?id=<?=$show->id?>" class="btn btn-primary" name="modify"  id="modify" value="modify" ><i class="fa fa-edit" aria-hidden="true"></i></a>
                                 <a href="accueil?idUsers=<?= $show->id?>"class="btn btn-danger" name="deleteProposition"  id="deleteProposition"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                 </form>
                                 <?php } ?>
