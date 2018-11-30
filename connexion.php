@@ -2,13 +2,7 @@
 include_once 'header.php';
 include_once 'controllers/connexionCtrl.php';
 include 'controllers/headerCtrl.php';
-//définir un cookie qui sera envoyé 
-//if (!empty($_POST)) {
-// setcookie('login', $_POST['login'], time() + (60 * 60 * 24 * 30));
-//}
-//if (!empty($_POST['password'])) {
-//setcookie('password', $_POST['password'], time() + (60 * 60 * 24 * 30));
-//}
+
 ?>
 
 <!-- Email -->
@@ -19,6 +13,7 @@ include 'controllers/headerCtrl.php';
     <label for="password"><?= FORM_PASSWORD ?></label>
     <input type="password" name="password" id="password" class="form mb-4"/>
     <input type="submit" value="<?= FORM_LOGIN_SUBMIT ?>" name="loginSubmit" id="loginSubmit" />
+   
 </form>
 <?php if ($message != '') { ?>
     <p><?= $message ?></p>

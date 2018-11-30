@@ -1,1 +1,17 @@
-
+<ifModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^accueil$ index.php
+RewriteRule ^MonCompte$  profile.php
+RewriteRule ^connexion$  connexion.php
+RewriteRule ^proposition$  proposition.php
+RewriteRule ^programme$  ProgrammeAlimentaire.php
+RewriteRule ^programme$  ProgrammeSportifs.php
+RewriteRule ^Entreprise$  SocieteEntreprise.php
+RewriteRule ^DevenirCoach$  DevenirCoach.php
+RewriteRule ^Decouverte$  Decouverte.php
+RewriteRule ^inscription$  register.php
+RewriteRule ^contact$  contact.php
+RewriteRule ^conseils$  conseils.php
+RewriteRule ^Mproposition$  modifyProposition.php
+ErrorDocument 404 /404.php 
+</ifModule>

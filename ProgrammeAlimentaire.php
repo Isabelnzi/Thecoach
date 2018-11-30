@@ -4,7 +4,7 @@ include 'header.php';
 <h1>L'alimentation l'élément-clé d'un bon programme sportif</h1>
 <h2>Une alimentation équilibrée est adaptée.</h2>
 <p><strong>Mens sana in corpore sano" "Un esprit sain dans un corps sain" </strong>
-<img id="sain" src="assets/img/bol de nourriture.jpg" alt="bol de nourriture" title="healthy food" height="300" /></p>
+<img  class="col-xl-2" id="sain" src="assets/img/bol de nourriture.jpg" alt="bol de nourriture" title="healthy food"  /></p>
 <p>On nous parle aujourd'hui de nouvelles méthodes pour une perte de poids plus rapide, plus efficace. Mais on n'oublie souvent l'essentielle est ce que celle-ci est adaptée à notre environnement, à notre équilibre ou à nos besoins s rythmes de vie ont beaucoup évolué, les modes de consommation aussi .Les besoins et les désirs de chacun au niveau de l'alimentation sont en perpétuelle évolution.
 Les rythmes de vie ayant évolué notre corps nous sollicite de plus en plus il faut donc adapter son alimentation aux besoins de celui-ci.
 </p>
@@ -24,7 +24,7 @@ Selon les personnes, cela peut-être de simples petits réajustements pour trouv
       <div class="col-sm blue lighten-1">
           <h3>DES PROGRAMMES ALIMENTAIRES & SPORTIFS</h3>
    <img src="assets/img/stopwatch.png" alt="un chronométre" title="chronométre" />
-    <a href="http://thecoach/ProgrammeSportifs.php" class="btn btn-indigo">Nos programmes</a>
+    <a href="http://thecoach/programme" class="btn btn-indigo">Nos programmes</a>
     </div>
     <div class="col-sm amber lighten-2">
         <h3>UN PROGRAMME SUR-MESURE & A DISTANCE</h3>
@@ -33,7 +33,7 @@ Selon les personnes, cela peut-être de simples petits réajustements pour trouv
     <div class="col-sm blue lighten-1">
         <h3>UN MODE DE VIE PLUS SAIN ET HEALTHY</h3> 
       <img src="assets/img/apple.png" alt="une pomme" title="pomme" />
-   <a  href="http://thecoach/conseils.php" class="btn btn-indigo ">Nos conseils</a>
+   <a  href="http://thecoach/conseils" class="btn btn-indigo ">Nos conseils</a>
     </div>
   </div>
 </div>

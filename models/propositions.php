@@ -34,27 +34,49 @@ class propositions extends database {
 
         return $result->execute();
     }
-     public function showProposition() {
-         $result = array();
-        $PDOResult = $this->db->prepare('SELECT `iNZ25_propositions`.`propositionName`, `iNZ25_propositions`.`address`,`iNZ25_propositions`.`idUsers`,`iNZ25_users`.`id`,`iNZ25_users`.`login`, `iNZ25_propositions`.`dateHour`, `iNZ25_sports`.`sportName`, `iNZ25_city`.`cityName`, `iNZ25_city`.`zipCode`, `iNZ25_sports`.`sportName`, '
+    /*
+     * methode pour afficher la proposition de l'utilisateur dans l'index
+     */
+      public function showProposition() {
+        $PDOResult = $this->db->prepare('SELECT `iNZ25_propositions`.`id`, `iNZ25_propositions`.`propositionName`, `iNZ25_propositions`.`address`, `iNZ25_propositions`.`dateHour`, `iNZ25_sports`.`sportName`, `iNZ25_city`.`cityName`, `iNZ25_city`.`zipCode` '
                 . 'FROM `iNZ25_propositions` '
-                . 'INNER JOIN `iNZ25_users` '
-                . 'ON `iNZ25_propositions`.`idUsers` = `iNZ25_users`.`id`'
                 . 'INNER JOIN `iNZ25_city` '
                 . 'ON `iNZ25_propositions`.`idCity` = `iNZ25_city`.`id` '
                 . 'INNER JOIN `iNZ25_sports` '
-                . 'ON `iNZ25_propositions`.`idSports` = `iNZ25_sports`.`id` '
-                . 'WHERE `iNZ25_propositions`.`idUsers` = `iNZ25_users`.`id`');// :id marqueur nominatif car id est une inconnue
+                . 'ON `iNZ25_propositions`.`idSports` = `iNZ25_sports`.`id`');// :id marqueur nominatif car id est une inconnue
         // bindvalue Associe une valeur à un paramètre (marqueur nominatif), this se réfère à tous les attributs de la classe
         /** On execute la requête
          */
         $PDOResult->execute();
         if (is_object($PDOResult)) {
             /**
-             * On utilise fetch pour la récupération d'une seule valeur
+             * On utilise fetchall pour la récupération de plusieurs valeurs dans un tableau
              */
-            $result = $PDOResult->fetchall(PDO::FETCH_OBJ);
-        }
+            $result = $PDOResult->fetchAll(PDO::FETCH_OBJ);
+       }
         return $result;
     }
+    public function updatePropositions() {
+        //méthode permettant la modification de la proposition  de l'utilisateur
+
+        $query = 'UPDATE `iNZ25_propositions` SET `propositionName` = :propositionName, `address` = :address`, `idSports` = :sportName, `dateHour` = :dateHour, `idCity` = :city '
+                . 'WHERE `id` = :id ';
+        $modifyProposition = $this->db->prepare($query);
+         $modifyProposition->bindvalue(':id', $this->id, PDO::PARAM_INT);
+        $modifyProposition->bindValue(':propositionName', $this->propositionName, PDO::PARAM_STR);
+        $modifyProposition->bindValue(':address', $this->address, PDO::PARAM_STR);
+        $modifyProposition->bindValue(':sportName', $this->idSports, PDO::PARAM_INT);
+        $modifyProposition->bindValue(':dateHour', $this->dateHour, PDO::PARAM_STR);
+        $modifyProposition->bindValue(':city', $this->idCity, PDO::PARAM_INT);
+        return $modifyProposition->execute();
+    }
+   
+
+    public function deletePropositions() {
+        $remove = $this->db->prepare('DELETE FROM `iNZ25_propositions` WHERE `id` =  :idUser ');
+        $remove->bindValue(':idUser', $this->id, PDO::PARAM_INT);
+        return $remove->execute();
+    }
+
 }
+

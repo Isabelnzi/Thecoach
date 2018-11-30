@@ -14,7 +14,8 @@ class city extends database {
     }
 
     /**
-     * Méthode permettant l'enregistrement de la ville de l'utilisateur
+     * Méthode permettant l'enregistrement de la ville de l'utilisateur qu'on récupére dans un select
+     * 
      * @return boolean
      */
     public function getCityByZipCode() {

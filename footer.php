@@ -70,16 +70,16 @@
                 <h6 class="text-uppercase font-weight-bold">Programmes</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/ProgrammeSportifs.php">Sportif</a>
+                    <a class="dark-grey-text" href="http://thecoach/programme">Sportif</a>
                 </p>
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/ProgrammeAlimentaire.php">Alimentaire</a>
+                    <a class="dark-grey-text" href="http://thecoach/programme">Alimentaire</a>
                 </p>
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/Decouverte.php">Découverte</a>
+                    <a class="dark-grey-text" href="http://thecoach/Decouverte">Découverte</a>
                 </p>
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/SocieteEntreprise.php">Société/Entreprise</a>
+                    <a class="dark-grey-text" href="http://thecoach/Entreprise">Société/Entreprise</a>
                 </p>
 
             </div>
@@ -92,10 +92,10 @@
                 <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/register.php">Inscription</a>
+                    <a class="dark-grey-text" href="http://thecoach/inscription">Inscription</a>
                 </p>
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/DevenirCoach.php">Devenir Coach</a>
+                    <a class="dark-grey-text" href="http://thecoach/DevenirCoach">Devenir Coach</a>
                 </p>
                 <p>
                     <a class="dark-grey-text" href="http://thecoach/politique.php">Politique de cinfidentialité</a>
@@ -111,7 +111,7 @@
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 
-                <p><a class="dark-grey-text" href="contact.php"><i class="fa fa-envelope mr-3"></i> Nous contacter</a></p>
+                <p><a class="dark-grey-text" href="contact"><i class="fa fa-envelope mr-3"></i> Nous contacter</a></p>
                 <button onclick="topFunction()" id="myBtn" title="Remonter" ><img src="assets/img/gym-shoes.png" alt="" title=""/></button>
             </div>
             <!-- Grid column -->

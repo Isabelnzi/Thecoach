@@ -20,23 +20,23 @@ include 'controllers/headerCtrl.php';
         <!--création d'une navbar-->
     <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning ">
-            <a class="navbar-brand" href="http://thecoach/index.php">The Coach</a>
+            <a class="navbar-brand" href="http://thecoach/accueil">The Coach</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://thecoach/DevenirCoach.php">Devenir Coach</a>
+                        <a class="nav-link" href="http://thecoach/DevenirCoach">Devenir Coach</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Programmes</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="http://thecoach/ProgrammeSportifs.php">Sportifs</a>
-                            <a class="dropdown-item" href="http://thecoach/ProgrammeAlimentaire.php">Alimentaire</a>
-                            <a class="dropdown-item" href="http://thecoach/Decouverte.php">Découverte</a>
-                            <a class="dropdown-item" href="http://thecoach/SocieteEntreprise.php">Société/Entreprise</a>
+                            <a class="dropdown-item" href="http://thecoach/programme">Sportifs</a>
+                            <a class="dropdown-item" href="http://thecoach/programme">Alimentaire</a>
+                            <a class="dropdown-item" href="http://thecoach/Decouverte">Découverte</a>
+                            <a class="dropdown-item" href="http://thecoach/Entreprise">Société/Entreprise</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"></a>
                         </div>
@@ -46,13 +46,13 @@ include 'controllers/headerCtrl.php';
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
                             <?php if (!isset($_SESSION['isConnect'])) { ?>
-                                <a class="btn btn-indigo" href="http://thecoach/connexion.php" role="button" id="submit"><?= NAV_CONNECT ?></a>
+                                <a class="btn btn-indigo" href="http://thecoach/connexion" role="button" id="submit"><?= NAV_CONNECT ?></a>
                             <?php } else { ?>
                                 <a class = "nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><?= sprintf(NAV_WELCOME, $_SESSION['firstname']) ?></a> 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item" href="http://thecoach/profile.php?id=<?= $_SESSION['id'] ?>"><?= NAV_PROFILE ?></a>
-                                    <a class="dropdown-item" href="http://thecoach/proposition.php?id=<?= $_SESSION['id'] ?>"><?= NAV_EVENT?></a>
+                                    <a class="dropdown-item" href="http://thecoach/MonCompte?id=<?= $_SESSION['id'] ?>"><?= NAV_PROFILE ?></a>
+                                    <a class="dropdown-item" href="http://thecoach/proposition?idPropositions=<?= $_SESSION['id'] ?>"><?= NAV_EVENT?></a>
                                     <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?action=disconnect"><?= NAV_DISCONNECT ?></a>
                                 </div>
                     <?php }
@@ -60,7 +60,9 @@ include 'controllers/headerCtrl.php';
                     </ul>
                 </form>
                 <div>
-                <a class="btn btn-indigo" href="http://thecoach/register.php" role="button" id="submit">Inscription</a>
+                     <?php if (!isset($_SESSION['isConnect'])) { ?>
+                <a class="btn btn-indigo" href="http://thecoach/inscription" role="button" id="submit">Inscription</a>
+                <?php } ?>
             </div>
             </div>
         </nav> 

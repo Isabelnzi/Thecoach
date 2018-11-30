@@ -76,7 +76,7 @@ class users extends database {
     public function getProfilUserById() {
         $PDOResult = $this->db->prepare('SELECT `iNZ25_users`.`id`, `iNZ25_users`.`lastname`, `iNZ25_users`.`firstname`, `iNZ25_users`.`birthDate`, `iNZ25_users`.`phoneNumber`, `iNZ25_users`.`email`, `iNZ25_users`.`address`, `iNZ25_city`.`cityName`, `iNZ25_city`.`zipCode` '
                 . 'FROM `iNZ25_users` '
-                . 'INNER JOIN `iNZ25_city` '
+                . 'INNER JOIN `iNZ25_city` '//pour récupérer les données de la table city
                 . 'ON `iNZ25_users`.`idCity` = `iNZ25_city`.`id` '
                 . 'WHERE `iNZ25_users`.`id` = :id'); // :id marqueur nominatif car id est une inconnue
         // bindvalue Associe une valeur à un paramètre (marqueur nominatif), this se réfère à tous les attributs de la classe

@@ -1,7 +1,7 @@
 <?php
+include 'header.php';
 include 'configuration.php';
 include 'controllers/indexCtrl.php';
-include 'header.php';
 ?>
 
 <!--Création d'un caroussel d'image de sport ou de sportif-->
@@ -88,102 +88,49 @@ include 'header.php';
     </div>
 </div> 
 
+<!-- Début caroussel activités -->
 <h1>Partagez vos Activités</h1>
 <div class="partagez">
     <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
 </div>
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-    <!--Controls-->
-    <div class="controls-top">
-        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-    </div>
-    <!--/.Controls-->
-
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-        <li data-target="#multi-item-example" data-slide-to="1"></li>
-        <li data-target="#multi-item-example" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-
-    <!--Slides-->
     <div class="carousel-inner" role="listbox">
 
         <!--First slide-->
         <div class="carousel-item active">
+
             <div class="row">
 
-                <div class="col-md-3">
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="/assets/img/fitness-1348867__340.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <?php foreach($showPropositionUser as $showPropositionUser){ ?>
-                               <h1><?= REGISTER_SPORTS ?> :  <?= $showPropositionUser->sportName ?></h1>
-                                <p><?= REGISTER_DATE ?> : <?= $showPropositionUser->dateHour ?></p>
-                                <p><?= REGISTER_ADDRESS ?> : <?= $showPropositionUser->address ?></p>
-                                <p><?= REGISTER_ZIPCODE ?> : <?= $showPropositionUser->zipCode ?></p>
-                                <p><?= REGISTER_CITY ?> : <?= $showPropositionUser->city ?></p>
-                                <p><?= REGISTER_PROPOSITION ?> : <?= $showPropositionUser->propositionName ?></p>
+                <?php foreach ($showPropositionUser as $show) { ?>
+                <!-- je fais une boucle foreach pour afficher toutes les activités crée dans une carde-->
+                    <div class="col-md-3">
+                        <div class="card mb-2 ml-4">
+                                <h1><?= REGISTER_SPORTS ?>  <?= $show->sportName ?></h1>
+                            <div class="card-body">
+                                <p><?= REGISTER_DATE ?>  <?= $show->dateHour ?></p>
+                                <p><?= REGISTER_ADDRESS ?> : <?= $show->address ?></p>
+                                <p><?= REGISTER_ZIPCODE ?> : <?= $show->zipCode ?></p>
+                                <p><?= REGISTER_CITY ?>  <?= $show->cityName ?></p>
+                                <p><?= REGISTER_PROPOSITION ?> : <?= $show->propositionName ?></p>
+                                <!-- lien qui permet l'id de la proposition et dde l'utilisateur pour connaitre leur choix-->
+                                <form  method="POST">
+                                <a class="btn btn-ambre" name="participe" href="accueil?idPropositions=<?= $show->id ?>" id="participe">Je Participe</a>
+                                <?php if(isset($_SESSION['isConnect'])){ ?>
+                                <a href="Mproposition" class="btn btn-primary" name="modify"  id="modifyPropositionGET" value="modify" ><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a href="accueil?idUsers=<?= $show->id?>"class="btn btn-danger" name="deleteProposition"  id="deleteProposition"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </form>
                                 <?php } ?>
-                                <a class="btn btn-primary">Je Participe</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
 
-                <div class="col-md-3 clearfix d-none d-md-block">
-                    <div class="card mb-4">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
-                            <a class="btn btn-primary">Je Participe</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!--/.First slide-->
 
-        <!--Second slide-->
-        <div class="carousel-item">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
-                            <a class="btn btn-primary">Je Participe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 clearfix d-none d-md-block">
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
-                            <a class="btn btn-primary">Je Participe</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.Second slide-->
     </div>
     <!--/.Slides-->
+
 </div>
 <!--/.Carousel Wrapper-->
 <?php include 'footer.php'; ?>

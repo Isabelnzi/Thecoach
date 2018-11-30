@@ -13,10 +13,10 @@ if (isset($_POST['zipCodeSearch'])) {
      * On instancie l'objet profil
      */
     $profil = new users();
-    if (isset($_GET['idUser'])) {
-        $profil->id = $_GET['idUser'];
-    } elseif (isset($_GET['id'])) {
-        $profil->id = $_GET['id'];
+    if (isset($_SESSION['idUser'])) {
+        $profil->id = $_SESSION['idUser'];
+    } elseif (isset($_SESSION['id'])) {
+        $profil->id = $_SESSION['id'];
     }
 
     /**

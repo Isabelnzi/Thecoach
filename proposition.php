@@ -1,14 +1,12 @@
 <?php
-include 'configuration.php';
-include 'controllers/propositionCtrl.php';
 include 'header.php';
+include 'controllers/propositionCtrl.php';
 if (isset($_POST['go']) && (count($formError) === 0)) {
     ?> 
     <div class="containe-fluid">
         <div class="alert" id="go">
             <h1>Votre événement à été créée!</h1>  
         </div>
-
     <?php } ?>
     <!--Propositon d'activité de la part d'un client ou un coach peut proposer ces services et les clients peuveut s'inscrire-->
     <!--on a deux select pour choisir le sport et l'autre pour savoir si on veut pratiquer le sport en intérieur ou extérieur-->
@@ -17,7 +15,7 @@ if (isset($_POST['go']) && (count($formError) === 0)) {
         <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
     </div>
     <!--création du formulaire d'événement-->
-    <form action="index.php" method="post">              
+    <form action="proposition.php" method="post">              
         <div class="container">
             <div class="row">
                 <div class="col-sm-md-4">
@@ -57,13 +55,13 @@ if (isset($_POST['go']) && (count($formError) === 0)) {
 
             <div class="md-form"> 
                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                <label for="date"><?= REGISTER_DATE ?></label>
+                <label for="date"></label>
                 <input type="date" name="date" id="date" placeholder="date" value="<?= isset($_POST['date']) ? $_POST['date'] : '' ?>"/>
                 <p class="text-danger"><?= isset($formError['date']) ? $formError['date'] : ''; ?></p>
             </div>
             <div class="md-form">
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <label for="hour"><?= REGISTER_HOUR ?></label>
+                <label for="hour"></label>
                 <input type="time" name="hour" id="hour" placeholder="heure" value="<?= isset($hour) ? $hour : '' ?>"/>
                 <p class="text-danger"><?= isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
             </div>

@@ -72,7 +72,7 @@ include 'controllers/userCtrl.php';
                     <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <a href="profile.php?idUser=<?= $profilUser->id ?>" class="btn btn-danger" id="delete" data-toggle="modal" data-target="#basicExampleModal" role="button" aria-pressed="true"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                <a href="profile?idUser=<?= $profilUser->id ?>" class="btn btn-danger" id="delete" data-toggle="modal" data-target="#basicExampleModal" role="button" aria-pressed="true"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </div>
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimer votre compte</h5>
@@ -87,6 +87,7 @@ include 'controllers/userCtrl.php';
                     <p class="text-danger"><?= isset($formError['updateButton']) ? $formError['updateButton'] : '' ?></p>
                 </div>  
     <form action="#" method="POST">
+        <h1>MODIFIER VOTRE MOT DE PASSE </H1>
     <div class="md-form">
         <label for="password"><?= REGISTER_PASSWORD ?></label>
         <input type="password" name="password" id="password"/>

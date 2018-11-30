@@ -25,7 +25,7 @@ if (isset($_POST['zipCodeSearch'])) {
 // Déclaration du tableau d'erreur 
     $formError = array();
 
-    if (isset($_POST['go'])) {
+    if (isset($_POST['go'])){
 // on teste la déclaration de nos variables
         if (!empty($_POST['sports'])) {
             if (preg_match($regexLetterAndNumber, $_POST['sports'])) {
@@ -91,6 +91,7 @@ if (isset($_POST['zipCodeSearch'])) {
 
     if (isset($_POST['go']) && count($formError) == 0) {
         $proposition = new propositions();
+        
         $proposition->propositionName = $propositionName;
         $proposition->address = $address;
         $proposition->dateHour = $date . ' ' . $hour;
@@ -107,9 +108,4 @@ $sportList = $sport->getSports();
 
 
 
-    
- 
-
-// Formatage de la date au format français
-//$date = $showPropositionUser->date;
-//$date = date_create($date);
+  
