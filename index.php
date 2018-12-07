@@ -112,7 +112,7 @@ include 'controllers/indexCtrl.php';
                                 <p><?= REGISTER_CITY ?>  <?= $show->cityName ?></p>
                                 <p><?= REGISTER_PROPOSITION ?> : <?= $show->propositionName ?></p>
                                 <!-- lien qui permet l'id de la proposition et dde l'utilisateur pour connaitre leur choix-->
-                                <form  method="POST">
+                                <form  method="POST">   
                                 <a class="btn btn-ambre" name="participe" href="accueil?idPropositions=<?= $show->id ?>" id="participe">Je Participe</a>
                                 <?php if(isset($_SESSION['isConnect'])){ ?>
                                 <a href="Mproposition?id=<?=$show->id?>" class="btn btn-primary" name="modify"  id="modify" value="modify" ><i class="fa fa-edit" aria-hidden="true"></i></a>

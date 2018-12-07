@@ -7,7 +7,7 @@ include 'header.php';
     <div class="col-md-12" id="blog">
         <div class="row">
             <figure class="col-md-3">
-                <a href="http://thecoach/Programmesportifs.php" data-size="1400x1067">
+                <a href="http://thecoach/ProgrammeSportifs" data-size="1400x1067">
                     <img src="assets/img/Découverte.jpg" alt="coach et son éléve" title="entraînement" class="img-fluid" />
                 </a>
                 <h1>Musculation: comment bien se muscler</h1>
@@ -15,7 +15,7 @@ include 'header.php';
             </figure>
 
             <figure class="col-md-3">
-                <a href="http://thecoach/Programmesportifs.php" data-size="1400x1067">
+                <a href="http://thecoach/ProgrammeSportifs" data-size="1400x1067">
                     <img src="assets/img/fitness.jpg" alt="joggeuse" title="joggeuse" class="img-fluid" />
                 </a>
                 <h1>Reprendre un sport avec un coach sportif</h1>
@@ -24,7 +24,7 @@ include 'header.php';
             </figure>
 
             <figure class="col-md-3">
-                <a href="http://thecoach/Programmesportifs.php" data-size="1400x1067">
+                <a href="http://thecoach/ProgrammeSportifs" data-size="1400x1067">
                     <img src="assets/img/Perte de poids.jpg.jpg" alt="produits sain" title="produits sain"class="img-fluid" />
                 </a>
                 <h1> Le bon programme pour maigrir associe sport et menus équilibrés</h1>
@@ -33,7 +33,7 @@ include 'header.php';
                 </p> 
             </figure>
             <figure class="col-md-3">
-                <a href="http://thecoach/Programmesportifs.php" data-size="1600x1067">
+                <a href="http://thecoach/ProgrammeSportifs" data-size="1600x1067">
                     <img src="assets/img/bien-être.jpg" alt="personnes faisant du yoga" title="yoga" class="img-fluid" />
                 </a>
                 <h1> Bien être et meilleure qualité de vie </h1>

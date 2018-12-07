@@ -15,7 +15,7 @@ if (isset($_POST['registerVerify'])) {
 // condition pour enregistrer le choix de l'utilisateur = activité a laquel il participe
     if (isset($_GET['idPropositions'])) {
         $userRegister = new usersPropositions();
-        $userRegister->idUsers = $_SESSION['id'];
+        //$userRegister->idUsers = $_SESSION['id'];
         $userRegister->idPropositions = $_GET['idPropositions'];
         $userRegister->registerUserId();
     }

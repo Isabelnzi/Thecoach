@@ -3,7 +3,7 @@
 
 class city extends database {
 
-    public $id = '';
+    public $id = 0;
     public $name = '';
     public $zipcode = '';
     public $idDepartement = '';

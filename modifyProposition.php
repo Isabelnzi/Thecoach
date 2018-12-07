@@ -1,8 +1,6 @@
 <?php
 include 'header.php';
 include 'controllers/propositionCtrl.php';
-//include 'controllers/modifyCtrl.php';
-
 ?>
 <!--Propositon d'activité de la part d'un client ou un coach peut proposer ces services et les clients peuveut s'inscrire-->
 <!--on a deux select pour choisir le sport et l'autre pour savoir si on veut pratiquer le sport en intérieur ou extérieur-->
@@ -19,7 +17,7 @@ include 'controllers/propositionCtrl.php';
                 <label for="sports">Sports</label>
                 <select name="sports" id="sports" class="form">
                     <option selected disabled><?= $showUserProposition->sportName ?></option>
-                    <?php foreach ($sportList as $sportListName) { ?>
+<?php foreach ($sportList as $sportListName) { ?>
                         <option value="<?= $sportListName->id ?>"><?= $sportListName->sportName ?></option>   
                     <?php } ?>
                 </select>
@@ -40,7 +38,7 @@ include 'controllers/propositionCtrl.php';
                     <label for="city"><?= REGISTER_CITY ?></label>
                     <select name = "city" id="city" >
                         <option selected disabled><?= $showUserProposition->cityName ?></option>
-                        <?php foreach ($cityName as $cityValue) { ?>
+<?php foreach ($cityName as $cityValue) { ?>
                             <option value="<?= $cityValue->cityValue . id ?>"></option>   
                         <?php } ?>
                     </select>
@@ -70,7 +68,6 @@ include 'controllers/propositionCtrl.php';
         <div class="text-center">
             <a href="" class="btn btn-primary" type="submit" name="modifyProposition"  id="modifyProposition" value="modifyProposition">MODIFIER</a> 
         </div>
-        <?=        var_dump($showUserProposition); ?>
     </div>
 </form>
 <?php include 'footer.php'; ?>

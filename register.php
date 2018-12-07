@@ -83,13 +83,11 @@ if (isset($_POST['register']) && (count($formError) === 0)) {
                                     <p class="text-danger"><?= isset($formError['zipCode']) ? $formError['zipCode'] : ''; ?></p>
                                 </div>
                                 <!-- ville -->
-                                <div class="md-form">
+                                <div class="col-md-2">
                                     <label for="city"><?= REGISTER_CITY ?></label>
                                     <select name = "city" id="city" >
-                                        <option selected disabled>Choisir une ville</option>
-                                        <?php foreach ($cityName as $cityValue) { ?>
+                                       <option selected disabled>Choisir une ville</option>
                                             <option value="<?= $cityValue->cityValue . id ?>"></option>   
-                                        <?php } ?>
                                     </select>
                                     <p class="text-danger"><?= isset($formError['city']) ? $formError['city'] : ''; ?></p>
                                 </div>

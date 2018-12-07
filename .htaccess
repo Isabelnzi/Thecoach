@@ -5,7 +5,7 @@ RewriteRule ^MonCompte$  profile.php
 RewriteRule ^connexion$  connexion.php
 RewriteRule ^proposition$  proposition.php
 RewriteRule ^programme$  ProgrammeAlimentaire.php
-RewriteRule ^programme$  ProgrammeSportifs.php
+RewriteRule ^programmeSportifs$  ProgrammeSportifs.php
 RewriteRule ^Entreprise$  SocieteEntreprise.php
 RewriteRule ^DevenirCoach$  DevenirCoach.php
 RewriteRule ^Decouverte$  Decouverte.php

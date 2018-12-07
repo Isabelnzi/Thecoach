@@ -3,9 +3,9 @@
 class usersPropositions extends database {
 
 //on déclare les attributs de la classe
-    public $id = '';
-    public $idPropositions = '';
-    public $idUsers = '';
+    public $id = 0;
+    public $idPropositions = 0;
+    public $idUsers = 0;
 
     public function __construct() {
         parent::__construct();

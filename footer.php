@@ -70,7 +70,7 @@
                 <h6 class="text-uppercase font-weight-bold">Programmes</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="dark-grey-text" href="http://thecoach/programme">Sportif</a>
+                    <a class="dark-grey-text" href="http://thecoach/programmeSportifs">Sportif</a>
                 </p>
                 <p>
                     <a class="dark-grey-text" href="http://thecoach/programme">Alimentaire</a>
@@ -78,9 +78,7 @@
                 <p>
                     <a class="dark-grey-text" href="http://thecoach/Decouverte">Découverte</a>
                 </p>
-                <p>
-                    <a class="dark-grey-text" href="http://thecoach/Entreprise">Société/Entreprise</a>
-                </p>
+              
 
             </div>
             <!-- Grid column -->

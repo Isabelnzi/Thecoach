@@ -10,7 +10,7 @@ $(function () {
                 $("#city").empty();
                 $.each(cityName, function (cityKey, cityValue) {
                     //la fonction each permet de parcourir les éléments de cityName
-                    $("#city").append('<option value=" ' + cityValue.id + '">' + cityValue.cityName + ' ' + '</option>')
+                    $("#city").append('<option value=" ' + cityValue.id + '">' + cityValue.cityName + ' ' + '</option>');
                 });
                 //la fonction append permet de récupérer le nom des villes dans mon select
             }, 'JSON');
@@ -22,7 +22,7 @@ $(function () {
     //l'événement blur = perte de focus
     $('#login').blur(function () {
         $.post('controllers/registerCtrl.php', {loginVerify: $(this).val()}, function (data) {
-            if (data == 1) {
+            if (data === 1) {
                 $('#login').addClass('bg-danger');
                 $('#register').hide();
             } else {
@@ -34,12 +34,12 @@ $(function () {
     });
 });
 
-//Ajax pour verifier si l'utilisateur est bien enregistré
+//Ajax pour verifier si l'utilisateur est bien enregistré pour participer a l'activité
 $(function () {
     //l'événement click = perte de focus
     $('#participe').click(function () {
         $.post('controllers/indexCtrl.php', {registerVerify: $(this).val()}, function (data) {
-           $('#participe').toggleClass('bg-success');
+           $('#participe').addClass('bg-success');
           
         },
                 'JSON');
@@ -52,7 +52,7 @@ $(function () {
 
 // fonction pour le bouton qui permet de remonter en haut de page
 window.onscroll = function () {
-    scrollFunction()
+    scrollFunction();
 };
 
 function scrollFunction() {

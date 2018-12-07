@@ -3,7 +3,7 @@
 class users extends database {
 
 //on déclare les attributs de la classe
-    public $id = '';
+    public $id = 0;
     public $login = '';
     public $password = '';
     public $lastname = '';
@@ -12,8 +12,8 @@ class users extends database {
     public $email = '';
     public $phoneNumber = '';
     public $address = '';
-    public $idCity = '';
-    public $idUserTypes = '';
+    public $idCity = 0;
+    public $idUserTypes = 0;
 
     public function __construct() {
         parent::__construct();

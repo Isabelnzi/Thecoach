@@ -3,7 +3,7 @@
 
 class sports extends database {
 
-    public $id = '';
+    public $id = 0;
     public $sportName = '';
   
 

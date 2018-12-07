@@ -3,14 +3,14 @@
 
 class propositions extends database {
 
-    public $id = '';
+    public $id = 0;
     public $propositionName = '';
     public $sports = '';
     public $dateHour = '';
     public $address = '';
     public $idUsers = '';
-    public $idCity = '';
-    public $idSports = '';
+    public $idCity = 0;
+    public $idSports = 0;
 
     public function __construct() {
         parent::__construct();

@@ -25,7 +25,7 @@ if (isset($_POST['zipCodeSearch'])) {
 // Déclaration du tableau d'erreur 
     $formError = array();
 
-    if (isset($_POST['go'])){
+    if (isset($_POST['go'])) {
 // on teste la déclaration de nos variables
         if (!empty($_POST['sports'])) {
             if (preg_match($regexLetterAndNumber, $_POST['sports'])) {
@@ -91,7 +91,7 @@ if (isset($_POST['zipCodeSearch'])) {
 
     if (isset($_POST['go']) && count($formError) == 0) {
         $proposition = new propositions();
-        
+
         $proposition->propositionName = $propositionName;
         $proposition->address = $address;
         $proposition->dateHour = $date . ' ' . $hour;
@@ -101,18 +101,26 @@ if (isset($_POST['zipCodeSearch'])) {
         $proposition->getPropositionByIdUsers();
     }
 }
-// if ($user->updatePropositions()) {
-//        $user->idUsers = $_SESSION['idUsers'];
-//  $userPropositionsModify = $user->updatePropositions();
+////modifier la proposition de l'utilisateur
+////$propositionUpdate = new propositions();
+//$propositionUser = $proposition->updatePropositions();
+//
+//if (count($formError) == 0) {
+//    // Récupération de la valeur de l'id dans le paramètre de l'url
+//    $proposition->id = $_GET['id'];
+//    if ($proposition->updatePropositions()) {
 //        $formResult['result'] = true;
-//    } else {
-//        $formError['modifyProposition'] = ERROR_SUBMIT;
 //    }
+//} else {
+//    $formError['modifyProposition'] = ERROR_SUBMIT;
+//}
 
+
+//permet d'afficher une seul proposition 
 $proposition = new propositions();
-if(isset($_GET['id'])){
-$proposition->id = $_GET['id'];
-$showUserProposition = $proposition->showPropositionOnce();
+if (isset($_GET['id'])) {
+    $proposition->id = $_GET['id'];
+    $showUserProposition = $proposition->showPropositionOnce();
 }
 
 // Instanciation de l'objet $sport pour afficher les données de la table sports dans le select
@@ -121,4 +129,3 @@ $sportList = $sport->getSports();
 
 
 
-  

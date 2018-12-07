@@ -33,10 +33,9 @@ include 'controllers/headerCtrl.php';
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Programmes</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="http://thecoach/programme">Sportifs</a>
+                            <a class="dropdown-item" href="http://thecoach/programmeSportifs">Sportifs</a>
                             <a class="dropdown-item" href="http://thecoach/programme">Alimentaire</a>
                             <a class="dropdown-item" href="http://thecoach/Decouverte">Découverte</a>
-                            <a class="dropdown-item" href="http://thecoach/Entreprise">Société/Entreprise</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"></a>
                         </div>
