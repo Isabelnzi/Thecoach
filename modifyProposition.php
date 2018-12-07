@@ -1,6 +1,7 @@
 <?php
 include 'header.php';
 include 'controllers/propositionCtrl.php';
+include 'controllers/modifyPropositionCtrl.php';
 ?>
 <!--Propositon d'activité de la part d'un client ou un coach peut proposer ces services et les clients peuveut s'inscrire-->
 <!--on a deux select pour choisir le sport et l'autre pour savoir si on veut pratiquer le sport en intérieur ou extérieur-->
@@ -9,7 +10,7 @@ include 'controllers/propositionCtrl.php';
     <h2>Fini le sport seul sans fun amusez vous à plusieurs et partagez vous le coach.</h2>
 </div>
 <!--création du formulaire d'événement-->
-<form action="proposition.php" method="POST">              
+<form action="index.php" method="POST">              
     <div class="container">
         <div class="row">
             <div class="col-sm-md-4">
@@ -17,7 +18,7 @@ include 'controllers/propositionCtrl.php';
                 <label for="sports">Sports</label>
                 <select name="sports" id="sports" class="form">
                     <option selected disabled><?= $showUserProposition->sportName ?></option>
-<?php foreach ($sportList as $sportListName) { ?>
+                    <?php foreach ($sportList as $sportListName) { ?>
                         <option value="<?= $sportListName->id ?>"><?= $sportListName->sportName ?></option>   
                     <?php } ?>
                 </select>
@@ -38,7 +39,7 @@ include 'controllers/propositionCtrl.php';
                     <label for="city"><?= REGISTER_CITY ?></label>
                     <select name = "city" id="city" >
                         <option selected disabled><?= $showUserProposition->cityName ?></option>
-<?php foreach ($cityName as $cityValue) { ?>
+                        <?php foreach ($cityName as $cityValue) { ?>
                             <option value="<?= $cityValue->cityValue . id ?>"></option>   
                         <?php } ?>
                     </select>
@@ -66,7 +67,8 @@ include 'controllers/propositionCtrl.php';
             <p class="text-danger"><?= isset($formError['propositionName']) ? $formError['propositionName'] : ''; ?></p>
         </div>
         <div class="text-center">
-            <a href="" class="btn btn-primary" type="submit" name="modifyProposition"  id="modifyProposition" value="modifyProposition">MODIFIER</a> 
+            <input type="submit"  name="modifyProposition" href="modifyProposition.php?id=<?= $_GET['id'] ?>"  id="modifyProposition" /> 
+            
         </div>
     </div>
 </form>
